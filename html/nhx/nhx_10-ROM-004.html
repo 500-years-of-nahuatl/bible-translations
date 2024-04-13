@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#F0B607" name="theme-color"/>
+  <title>
+   Romanos 4
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.1, end: 5.69 },
+    { label: "1b", start: 5.94, end: 9.51 },
+    { label: "2a", start: 9.76, end: 13.67 },
+    { label: "2b", start: 13.92, end: 16.21 },
+    { label: "2c", start: 16.46, end: 20.29 },
+    { label: "3a", start: 20.54, end: 24.29 },
+    { label: "3b", start: 24.54, end: 32.61 },
+    { label: "4a", start: 32.86, end: 34.91 },
+    { label: "4b", start: 35.16, end: 36.83 },
+    { label: "4c", start: 37.08, end: 41.75 },
+    { label: "5a", start: 42, end: 50.19 },
+    { label: "5b", start: 50.44, end: 53.65 },
+    { label: "6a", start: 53.9, end: 58.91 },
+    { label: "6b", start: 59.16, end: 63.09 },
+    { label: "7a", start: 63.34, end: 65.19 },
+    { label: "7b", start: 65.44, end: 72.83 },
+    { label: "8", start: 73.08, end: 80.11 },
+    { label: "9a", start: 80.36, end: 84.15 },
+    { label: "9b", start: 84.4, end: 87.93 },
+    { label: "9c", start: 88.18, end: 97.51 },
+    { label: "10a", start: 97.76, end: 99.59 },
+    { label: "10b", start: 99.84, end: 102.57 },
+    { label: "10c", start: 102.82, end: 104.67 },
+    { label: "10d", start: 104.92, end: 105.51 },
+    { label: "10e", start: 105.76, end: 108.05 },
+    { label: "11a", start: 108.3, end: 115.63 },
+    { label: "11b", start: 115.88, end: 117.97 },
+    { label: "11c", start: 118.22, end: 124.15 },
+    { label: "11d", start: 124.4, end: 127.19 },
+    { label: "11e", start: 127.44, end: 132.73 },
+    { label: "12a", start: 132.98, end: 137.87 },
+    { label: "12b", start: 138.12, end: 144.99 },
+    { label: "13a", start: 145.24, end: 155.07 },
+    { label: "13b", start: 155.32, end: 159.59 },
+    { label: "13c", start: 159.84, end: 162.85 },
+    { label: "13d", start: 163.1, end: 168.35 },
+    { label: "14a", start: 168.6, end: 173.59 },
+    { label: "14b", start: 173.84, end: 177.07 },
+    { label: "14c", start: 177.32, end: 181.19 },
+    { label: "15a", start: 181.44, end: 184.27 },
+    { label: "15b", start: 184.52, end: 187.21 },
+    { label: "15c", start: 187.46, end: 189.39 },
+    { label: "15d", start: 189.64, end: 193.33 },
+    { label: "16a", start: 193.58, end: 199.59 },
+    { label: "16b", start: 199.84, end: 203.83 },
+    { label: "16c", start: 204.08, end: 210.43 },
+    { label: "16d", start: 210.68, end: 214.15 },
+    { label: "16e", start: 214.4, end: 218.71 },
+    { label: "16f", start: 218.96, end: 221.69 },
+    { label: "17a", start: 221.94, end: 224.63 },
+    { label: "17b", start: 224.88, end: 228.87 },
+    { label: "17c", start: 229.12, end: 230.51 },
+    { label: "17d", start: 230.76, end: 237.23 },
+    { label: "17e", start: 237.48, end: 240.61 },
+    { label: "18a", start: 240.86, end: 244.83 },
+    { label: "18b", start: 245.08, end: 249.51 },
+    { label: "18c", start: 249.76, end: 253.43 },
+    { label: "18d", start: 253.68, end: 255.15 },
+    { label: "18e", start: 255.4, end: 259.55 },
+    { label: "19a", start: 259.8, end: 263.41 },
+    { label: "19b", start: 263.66, end: 266.27 },
+    { label: "19c", start: 266.52, end: 276.47 },
+    { label: "20a", start: 276.72, end: 279.79 },
+    { label: "20b", start: 280.04, end: 286.95 },
+    { label: "21", start: 287.2, end: 291.59 },
+    { label: "22", start: 291.84, end: 298.81 },
+    { label: "23", start: 299.06, end: 306.29 },
+    { label: "24a", start: 306.54, end: 308.83 },
+    { label: "24b", start: 309.08, end: 315.71 },
+    { label: "24c", start: 315.96, end: 319.09 },
+    { label: "25a", start: 319.34, end: 324.49 },
+    { label: "25b", start: 324.74, end: 330.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 16 }];
+var hasIntro = false;
+var baseRef  = "nhxT-10-ROM-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nhxT-09-ACT-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-10-ROM-003.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      Romanos
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      4
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-10-ROM-005.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-11-1CO-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Matimi̱xkui̱ti̱ka̱n pan yej kichij Abraham
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     4
+    </div>
+    <div class="txs" id="T1a">
+     ¿Iná̱n te̱ tikijto̱skej,
+    </div>
+    <div class="txs" id="T1b">
+     te̱ mota̱nilij to‑ikyapatajwe̱wej Abraham?
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Siga Dios kiye̱ꞌitaꞌ Abraham iga san yej kichij,
+    </div>
+    <div class="txs" id="T2b">
+     kajasi iga mamoweyimati,
+    </div>
+    <div class="txs" id="T2c">
+     eꞌ Abraham ayí̱ꞌ moweyimatiꞌ iyi̱xtaj Dios.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Puej ¿te̱ kijtowa ka̱n ijkuilijtoꞌ itájto̱l Dios?
+    </div>
+    <div class="txs" id="T3b">
+     “Dios kiye̱ꞌitaꞌ Abraham ken se̱ yej akichij yej aye̱kti iga moconfia̱roj ipan Dios.”
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Eꞌ siga se̱ tekipanowa,
+    </div>
+    <div class="txs" id="T4b">
+     itomi̱n ayá̱ꞌ san kipetzmakaj,
+    </div>
+    <div class="txs" id="T4c">
+     ma̱jwaꞌ kajasi iga makimakaka̱n iga tatá̱nija.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Eꞌ siga agaj yej niga te̱ kichi̱wa iga maye̱ꞌnemi iwá̱n kicre̱dowa ipan Dios iga yéj wel kiye̱ꞌitas,
+    </div>
+    <div class="txs" id="T5b">
+     Dios kiye̱ꞌita iga san kicre̱dowa ipan yéj.
+    </div>
+    <span id="bookmarks5">
+    </span>
+    <a id="v6">
+    </a>
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Ijko̱nsan no̱ kijtowa David iga mapa̱ki yej Dios kiye̱ꞌita,
+    </div>
+    <div class="txs" id="T6b">
+     malej iga ayá̱ꞌ kichij nité̱ iga makiye̱ꞌita.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     David kijtoj:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T7b">
+     Yo̱lpa̱któkeja yej Dios kiperdona̱rowílija yej kichijkej yej aye̱kti iwá̱n ke̱lka̱wílija yej ayompa kichijkej.
+    </div>
+    <span id="bookmarks7">
+    </span>
+   </div>
+   <span id="bookmarks7">
+   </span>
+   <a id="v8">
+   </a>
+   <div class="q-v">
+    <div class="txs" id="T8">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Yo̱lpa̱ktoꞌ ta̱gaꞌ yej toTe̱ko ayꞌya kejla̱mikiliá inó̱n yej aye̱kti kichij.
+    </div>
+    <span id="bookmarks8">
+    </span>
+   </div>
+   <span id="bookmarks8">
+   </span>
+   <a id="v9">
+   </a>
+   <div class="p">
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     ¿Ix yo̱lpa̱ktokej inó̱mejsan yej onokej circuncidado,
+    </div>
+    <div class="txs" id="T9b">
+     o no̱ yo̱lpa̱ktokej yej ayá̱ꞌ onokej circuncidado?
+    </div>
+    <div class="txs" id="T9c">
+     Tikitákeja iga Dios kiye̱ꞌitaꞌ Abraham ken se̱ yej akichij yej aye̱kti iga moconfiá̱rojsan ipan Dios.
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Eꞌ ¿ke̱man ijkó̱n kitaꞌ?
+    </div>
+    <div class="txs" id="T10b">
+     ¿Ix kua̱ꞌ Abraham onoyay circuncidado,
+    </div>
+    <div class="txs" id="T10c">
+     o kua̱ꞌ aya?
+    </div>
+    <div class="txs" id="T10d">
+     Áchtosan,
+    </div>
+    <div class="txs" id="T10e">
+     kua̱ꞌ aya mocircuncida̱rowa.
+    </div>
+    <span id="bookmarks10">
+    </span>
+    <a id="v11">
+    </a>
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Iwá̱n Abraham mocircuncida̱roj iga mane̱si iga Dios ki‑o̱memá̱wija ken se̱ yej ye̱ꞌnemi,
+    </div>
+    <div class="txs" id="T11b">
+     iga san moconfia̱roj ipan Dios.
+    </div>
+    <div class="txs" id="T11c">
+     Ijkó̱n iga Abraham mochij ken te̱tajwé̱j de inochi yej moconfia̱rowaj ipan Dios,
+    </div>
+    <div class="txs" id="T11d">
+     malej iga ayá̱ꞌ onokej circuncidado;
+    </div>
+    <div class="txs" id="T11e">
+     ijkó̱n Dios kita nochi ino̱mej ken kua̱ꞌ ayá̱ꞌ kichijkej yej aye̱kti.
+    </div>
+    <span id="bookmarks11">
+    </span>
+    <a id="v12">
+    </a>
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Abraham no̱ te̱tajwe̱wej de ino̱mej yej onokej circuncidado,
+    </div>
+    <div class="txs" id="T12b">
+     eꞌ yej no̱ moconfia̱rowaj kensan totajwe̱wej Abraham moconfia̱roj kua̱ꞌ aya onoya circuncidado.
+    </div>
+    <span id="bookmarks12">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Dios kichi̱wa yej kijtoj iga se̱ moconfia̱rówasan ípan
+    </div>
+   </div>
+   <span id="bookmarks12">
+   </span>
+   <a id="v13">
+   </a>
+   <div class="p">
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Pues Dios kijlij Abraham iwá̱n ipilówa̱mpa ipilowa̱n iga yejame̱n yawij kimakatij nochi ta̱jli iga mamochi̱wa itatkimej.
+    </div>
+    <div class="txs" id="T13b">
+     Eꞌ iní̱n mochij ayéj iga Abraham kichijtoya ken kijtowa la ley,
+    </div>
+    <div class="txs" id="T13c">
+     sino que iga moconfia̱roj ipan Dios,
+    </div>
+    <div class="txs" id="T13d">
+     iwá̱n Dios kitaꞌ Abraham kenkua̱ꞌ ayá̱ꞌ kichij nité̱ yej aye̱kti.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Siga katka yejsan kichi̱waj ken kijtowa la ley kimakaskej yej Dios kijtoj,
+    </div>
+    <div class="txs" id="T14b">
+     bá̱ldejsan iga timoconfia̱rowaj ipan Dios.
+    </div>
+    <div class="txs" id="T14c">
+     Iwá̱n ayꞌya vale̱ro̱j yej Dios kijtoj iga te̱makas.
+    </div>
+    <span id="bookmarks14">
+    </span>
+    <a id="v15">
+    </a>
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     Iga atikchi̱waj ken kijtowa la ley,
+    </div>
+    <div class="txs" id="T15b">
+     kajasi iga mate̱castiga̱ro̱ka̱n;
+    </div>
+    <div class="txs" id="T15c">
+     eꞌ ka̱n ateyi la ley,
+    </div>
+    <div class="txs" id="T15d">
+     ayagaj itechko iga akichi̱wa ken tatekimaka la ley.
+    </div>
+    <span id="bookmarks15">
+    </span>
+   </div>
+   <span id="bookmarks15">
+   </span>
+   <a id="v16">
+   </a>
+   <div class="p">
+    <div class="txs" id="T16a">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Inó̱n iga yej Dios kijlij Abraham iga kimakaskej nochi ipilowa̱n ipilówa̱mpa,
+    </div>
+    <div class="txs" id="T16b">
+     san kipetzmakaskej iga Abraham moconfia̱roj ipan yéj.
+    </div>
+    <div class="txs" id="T16c">
+     Ijkó̱n nochi ipilowa̱n ipilówa̱mpa Abraham kimatij iga kimakaskej yej Dios kijtoj;
+    </div>
+    <div class="txs" id="T16d">
+     ayéj iga yejsan kichi̱waj ken kijtowa la ley,
+    </div>
+    <div class="txs" id="T16e">
+     sino que no̱ iga nochi yej kicre̱dowaj ken kicre̱doj Abraham.
+    </div>
+    <div class="txs" id="T16f">
+     Yéj mochij te̱taj iga nochi tejamej.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Itájto̱l Dios tajtowa de Abraham:
+    </div>
+    <div class="txs" id="T17b">
+     “Tej nimitzta̱lij iga ite̱tajwe̱wej miaꞌ nacio̱mej.”
+    </div>
+    <div class="txs" id="T17c">
+     Iní̱n itájto̱l,
+    </div>
+    <div class="txs" id="T17d">
+     Dios kimáꞌ Abraham iga Abraham kicre̱doj ipan Dios yej wel ki‑ojpa‑ixitiá yej miktokej,
+    </div>
+    <div class="txs" id="T17e">
+     iwá̱n iga itájto̱l kichi̱wa yej aya teyi.
+    </div>
+    <span id="bookmarks17">
+    </span>
+   </div>
+   <span id="bookmarks17">
+   </span>
+   <a id="v18">
+   </a>
+   <div class="p">
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Malej iga ne̱siá iga isiwa̱ꞌ akitaya ipiltzi̱n,
+    </div>
+    <div class="txs" id="T18b">
+     Abraham kicre̱doj iga mochi̱was nochi yej Dios kijlij.
+    </div>
+    <div class="txs" id="T18c">
+     Ijkó̱n iga mochij “te̱taj iga miaꞌ pai̱smej”,
+    </div>
+    <div class="txs" id="T18d">
+     ijkó̱n ken Dios kijlij:
+    </div>
+    <div class="txs" id="T18e">
+     “Poxsan pi̱wis ipilowa̱n mopilowa̱n.”
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Abraham ayá̱ꞌ kikajtej iga moconfia̱roj ipan Dios,
+    </div>
+    <div class="txs" id="T19b">
+     malej iga kipiayay ken cien años,
+    </div>
+    <div class="txs" id="T19c">
+     iwá̱n yéj kimatiá iga yéj iwá̱n Sara ayoꞌ wejka iga mikiaja wa̱n poxsan yo̱lejkej iga makipiaka̱n ipilowa̱n.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Yéj ayá̱ꞌ kijtoj iga akicre̱dowa yej Dios kijlij,
+    </div>
+    <div class="txs" id="T20b">
+     ma̱jwaꞌ moconfia̱roj poxsan ipan itájto̱l Dios iwá̱n kiweyimati̱ltij,
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     kimelaꞌmati iga Dios wel kichi̱wa inewi yej kijlij.
+    </div>
+    <span id="bookmarks21">
+    </span>
+    <a id="v22">
+    </a>
+    <div class="txs" id="T22">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Inó̱n iga Dios kitaꞌ Abraham ken se̱ yej ye̱ꞌnemi iyi̱xtaj iga moconfia̱roj ipan yéj.
+    </div>
+    <span id="bookmarks22">
+    </span>
+   </div>
+   <span id="bookmarks22">
+   </span>
+   <a id="v23">
+   </a>
+   <div class="p">
+    <div class="txs" id="T23">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     Iwá̱n ayejsan iga Abraham iní̱n mo‑ijkuiloj iga Dios kitaꞌ ken se̱ yej ye̱ꞌnemi iyi̱xtaj;
+    </div>
+    <span id="bookmarks23">
+    </span>
+    <a id="v24">
+    </a>
+    <div class="txs" id="T24a">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     sino iga tejame̱n no̱.
+    </div>
+    <div class="txs" id="T24b">
+     Puej Dios no̱ te‑ita ken yej tiye̱ꞌnemij iyi̱xtaj iga timoconfia̱rowaj ipan yéj,
+    </div>
+    <div class="txs" id="T24c">
+     yej ki‑ojpa‑ixitij Jesús toTe̱ko.
+    </div>
+    <span id="bookmarks24">
+    </span>
+    <a id="v25">
+    </a>
+    <div class="txs" id="T25a">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Dios kineꞌ iga makimikti̱ka̱n Jesús iga yej tikchijkej yej aye̱kti,
+    </div>
+    <div class="txs" id="T25b">
+     iwá̱n ki‑ojpa‑ixitij iga matiye̱ꞌonoka̱n iyi̱xtaj yéj.
+    </div>
+    <span id="bookmarks25">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2016,
+      <a class="web-link" href="http://www.Wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2015,
+      <a class="web-link" href="https://live.bible.is/bible/NHXNHX/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;ISO_ROD_index=119">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de Tatahuicapan.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="http://cloud.faithcomesbyhearing.com/mp3audiobibles2/NHXNTVN2DA/B06___04_Romanos_____NHXNTVN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

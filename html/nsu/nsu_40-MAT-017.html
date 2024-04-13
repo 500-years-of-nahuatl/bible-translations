@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#083F0E" name="theme-color"/>
+  <title>
+   San Mateo 17
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.44, end: 5.53 },
+    { label: "1b", start: 5.78, end: 8.25 },
+    { label: "1c", start: 8.5, end: 10.85 },
+    { label: "1d", start: 11.1, end: 14.09 },
+    { label: "2a", start: 14.34, end: 17.49 },
+    { label: "2b", start: 17.74, end: 23.61 },
+    { label: "3", start: 23.86, end: 29.41 },
+    { label: "4a", start: 29.66, end: 32.15 },
+    { label: "4b", start: 32.4, end: 33.59 },
+    { label: "4c", start: 33.84, end: 35.67 },
+    { label: "4d", start: 35.92, end: 38.81 },
+    { label: "4e", start: 39.06, end: 40.63 },
+    { label: "4f", start: 40.88, end: 43.49 },
+    { label: "5a", start: 43.74, end: 45.87 },
+    { label: "5b", start: 46.12, end: 51.27 },
+    { label: "5c", start: 51.52, end: 52.19 },
+    { label: "5d", start: 52.44, end: 54.63 },
+    { label: "5e", start: 54.88, end: 56.63 },
+    { label: "5f", start: 56.88, end: 58.97 },
+    { label: "6a", start: 59.22, end: 61.73 },
+    { label: "6b", start: 61.98, end: 65.25 },
+    { label: "6c", start: 65.5, end: 67.53 },
+    { label: "7a", start: 67.78, end: 70.17 },
+    { label: "7b", start: 70.42, end: 73.69 },
+    { label: "7c", start: 73.94, end: 74.97 },
+    { label: "7d", start: 75.22, end: 76.71 },
+    { label: "8a", start: 76.96, end: 78.77 },
+    { label: "8b", start: 79.02, end: 80.21 },
+    { label: "8c", start: 80.46, end: 81.91 },
+    { label: "9a", start: 82.16, end: 84.47 },
+    { label: "9b", start: 84.72, end: 86.45 },
+    { label: "9c", start: 86.7, end: 89.53 },
+    { label: "9d", start: 89.78, end: 92.15 },
+    { label: "10a", start: 92.4, end: 95.05 },
+    { label: "10b", start: 95.3, end: 102.53 },
+    { label: "11a", start: 102.78, end: 104.73 },
+    { label: "11b", start: 104.98, end: 105.75 },
+    { label: "11c", start: 106, end: 109.01 },
+    { label: "12a", start: 109.26, end: 111.75 },
+    { label: "12b", start: 112, end: 113.89 },
+    { label: "12c", start: 114.14, end: 116.47 },
+    { label: "12d", start: 116.72, end: 119.81 },
+    { label: "13", start: 120.06, end: 126.99 },
+    { label: "14a", start: 127.24, end: 130.83 },
+    { label: "14b", start: 131.08, end: 133.67 },
+    { label: "14c", start: 133.92, end: 136.85 },
+    { label: "15a", start: 137.1, end: 138.05 },
+    { label: "15b", start: 138.3, end: 140.13 },
+    { label: "15c", start: 140.38, end: 142.51 },
+    { label: "15d", start: 142.76, end: 146.01 },
+    { label: "16", start: 146.26, end: 149.97 },
+    { label: "17a", start: 150.22, end: 151.75 },
+    { label: "17b", start: 152, end: 155.49 },
+    { label: "17c", start: 155.74, end: 157.27 },
+    { label: "17d", start: 157.52, end: 159.59 },
+    { label: "17e", start: 159.84, end: 161.51 },
+    { label: "18a", start: 161.76, end: 166.83 },
+    { label: "18b", start: 167.08, end: 169.25 },
+    { label: "19a", start: 169.5, end: 173.07 },
+    { label: "19b", start: 173.32, end: 174.15 },
+    { label: "19c", start: 174.4, end: 178.77 },
+    { label: "20a", start: 179.02, end: 180.59 },
+    { label: "20b", start: 180.84, end: 184.71 },
+    { label: "20c", start: 184.96, end: 188.65 },
+    { label: "20d", start: 188.9, end: 192.95 },
+    { label: "20e", start: 193.2, end: 195.33 },
+    { label: "20f", start: 195.58, end: 197.97 },
+    { label: "20g", start: 198.22, end: 199.91 },
+    { label: "20h", start: 200.16, end: 202.55 },
+    { label: "21", start: 202.8, end: 209.37 },
+    { label: "22a", start: 209.62, end: 213.41 },
+    { label: "22b", start: 213.66, end: 219.13 },
+    { label: "23a", start: 219.38, end: 220.51 },
+    { label: "23b", start: 220.76, end: 222.95 },
+    { label: "23c", start: 223.2, end: 228.19 },
+    { label: "24a", start: 228.44, end: 232.03 },
+    { label: "24b", start: 232.28, end: 236.55 },
+    { label: "24c", start: 236.8, end: 238.35 },
+    { label: "24d", start: 238.6, end: 242.35 },
+    { label: "25a", start: 242.6, end: 244.23 },
+    { label: "25b", start: 244.48, end: 245.51 },
+    { label: "25c", start: 245.76, end: 248.21 },
+    { label: "25d", start: 248.46, end: 250.61 },
+    { label: "25e", start: 250.86, end: 251.59 },
+    { label: "25f", start: 251.84, end: 252.39 },
+    { label: "25g", start: 252.64, end: 255.05 },
+    { label: "25h", start: 255.3, end: 257.39 },
+    { label: "25i", start: 257.64, end: 261.61 },
+    { label: "26a", start: 261.86, end: 263.39 },
+    { label: "26b", start: 263.64, end: 265.67 },
+    { label: "26c", start: 265.92, end: 267.53 },
+    { label: "26d", start: 267.78, end: 273.55 },
+    { label: "27a", start: 273.8, end: 276.89 },
+    { label: "27b", start: 277.14, end: 278.71 },
+    { label: "27c", start: 278.96, end: 280.33 },
+    { label: "27d", start: 280.58, end: 282.39 },
+    { label: "27e", start: 282.64, end: 284.69 },
+    { label: "27f", start: 284.94, end: 287.79 },
+    { label: "27g", start: 288.04, end: 292.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "nsu-40-MAT-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-40-MAT-016.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      San Mateo
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      17
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-40-MAT-018.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-41-MRK-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Jesús omopatlak
+    </div>
+   </div>
+   <div class="r">
+    <div id="r1">
+     (
+     <span class="reflink">
+      <a href="nsu-41-MRK-009.html#v2">
+       Mr. 9:2-13
+      </a>
+     </span>
+     ;
+     <span class="reflink">
+      <a href="nsu-42-LUK-009.html#v28">
+       Lc. 9:28-36
+      </a>
+     </span>
+     )
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     17
+    </div>
+    <div class="txs" id="T1a">
+     Chikuasen tonali satepa,
+    </div>
+    <div class="txs" id="T1b">
+     Jesús okinvikak san yejvan Pedro,
+    </div>
+    <div class="txs" id="T1c">
+     Jacobo ivan ikni tlen itoka Juan,
+    </div>
+    <div class="txs" id="T1d">
+     iva oyajkeh ipan se tepetl wejkapa.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Iva Jesús ompa inmixpa omopatlak.
+    </div>
+    <div class="txs" id="T2b">
+     Ixko opetlanki kemi tonali iva itzotzol omokuapki istak kemi se tlavili.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Iva ijkuakó ovalmonextijkeh in Moisés ivan Elías motlapovijtokeh ivan Jesús.
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó Pedro okilvi in Jesús:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T4b">
+     —NoTeko,
+    </div>
+    <div class="txs" id="T4c">
+     sa tlawel kuali nika ma tiekah.
+    </div>
+    <div class="txs" id="T4d">
+     Tla tikneki ma tikinchijchivakah eyi sakakaltih,
+    </div>
+    <div class="txs" id="T4e">
+     se para tejwatzi,
+    </div>
+    <div class="txs" id="T4f">
+     se para Moisés iva se para Elías.
+    </div>
+    <span id="bookmarks4">
+    </span>
+   </div>
+   <span id="bookmarks4">
+   </span>
+   <a id="v5">
+   </a>
+   <div class="p">
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak ok ijkó otlapojtoka,
+    </div>
+    <div class="txs" id="T5b">
+     ijkuakó se mixtli okinmokenki iva omokakki se tlajtoli de ijtik mixtli,
+    </div>
+    <div class="txs" id="T5c">
+     okijto:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T5d">
+     —Nin yen noKone tlen niktlasojtla,
+    </div>
+    <div class="txs" id="T5e">
+     tlen inavak nipaki.
+    </div>
+    <div class="txs" id="T5f">
+     Xikakikah tlen Ye imechilvia.
+    </div>
+    <span id="bookmarks5">
+    </span>
+   </div>
+   <span id="bookmarks5">
+   </span>
+   <a id="v6">
+   </a>
+   <div class="p">
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     In momachtijkeh ijkuak ijkó okikakkeh,
+    </div>
+    <div class="txs" id="T6b">
+     omotlankuaketzkeh iva omixtlapachojkeh ipan tlali,
+    </div>
+    <div class="txs" id="T6c">
+     iva sa tlawel omomavtijkeh.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó Jesús omotoki innavak,
+    </div>
+    <div class="txs" id="T7b">
+     okintlali imavah inpa iva okinmilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T7c">
+     —Ximoketzakah,
+    </div>
+    <div class="txs" id="T7d">
+     amo ximomavtikah.
+    </div>
+    <span id="bookmarks7">
+    </span>
+   </div>
+   <span id="bookmarks7">
+   </span>
+   <a id="v8">
+   </a>
+   <div class="p">
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak oajkotlachixkeh,
+    </div>
+    <div class="txs" id="T8b">
+     ayakmika okittakeh,
+    </div>
+    <div class="txs" id="T8c">
+     sino sa yen Jesús.
+    </div>
+    <span id="bookmarks8">
+    </span>
+   </div>
+   <span id="bookmarks8">
+   </span>
+   <a id="v9">
+   </a>
+   <div class="p">
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak yotemotiayah de ipan tepetl,
+    </div>
+    <div class="txs" id="T9b">
+     Jesús okinnavati:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T9c">
+     —Amika itla xiktlapovikah de tlen onkittakeh,
+    </div>
+    <div class="txs" id="T9d">
+     asta ijkuak moyolitis iKone in Tlakatl.
+    </div>
+    <span id="bookmarks9">
+    </span>
+   </div>
+   <span id="bookmarks9">
+   </span>
+   <a id="v10">
+   </a>
+   <div class="p">
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó in momachtijkeh okitlajtlanijkeh:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T10b">
+     —¿Tleka pues in tlamachtijkeh de itlanavatil Moisés kijtovah ke Elías yen achto kipia de vitz antes de vitz in Cristo?
+    </div>
+    <span id="bookmarks10">
+    </span>
+   </div>
+   <span id="bookmarks10">
+   </span>
+   <a id="v11">
+   </a>
+   <div class="p">
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús okinnankili:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T11b">
+     —Yi neli,
+    </div>
+    <div class="txs" id="T11c">
+     Elías achto vitz iva ye kiyektlalis nochi.
+    </div>
+    <span id="bookmarks11">
+    </span>
+    <a id="v12">
+    </a>
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Pero Ne nimechilvia ke Elías yovitza,
+    </div>
+    <div class="txs" id="T12b">
+     iva yejvah amo okineltokakeh,
+    </div>
+    <div class="txs" id="T12c">
+     sino okitoktijkeh san tlen yejvah okinekeh.
+    </div>
+    <div class="txs" id="T12d">
+     Ijkó noijki kitlajyoviltiskeh iKone in Tlakatl.
+    </div>
+    <span id="bookmarks12">
+    </span>
+   </div>
+   <span id="bookmarks12">
+   </span>
+   <a id="v13">
+   </a>
+   <div class="p">
+    <div class="txs" id="T13">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó in momachtijkeh okajsikamatkeh ke Jesús okintlapoviaya de Juan tlen tlabautisaro.
+    </div>
+    <span id="bookmarks13">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Jesús okipajti se telpochtli tlen okipiaya se amo kuali ejekatl
+    </div>
+   </div>
+   <div class="r">
+    <div id="r2">
+     (
+     <span class="reflink">
+      <a href="nsu-41-MRK-009.html#v14">
+       Mr. 9:14-29
+      </a>
+     </span>
+     ;
+     <span class="reflink">
+      <a href="nsu-42-LUK-009.html#v37">
+       Lc. 9:37-43
+      </a>
+     </span>
+     )
+    </div>
+   </div>
+   <span id="bookmarks13">
+   </span>
+   <a id="v14">
+   </a>
+   <div class="p">
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak oajsitoh kan okatkah in gentejtih,
+    </div>
+    <div class="txs" id="T14b">
+     ijkuakó se tlakatl omotoki inavak Jesús,
+    </div>
+    <div class="txs" id="T14c">
+     omotlankuaketzki iyakapa iva okilvi:
+    </div>
+    <span id="bookmarks14">
+    </span>
+   </div>
+   <span id="bookmarks14">
+   </span>
+   <a id="v15">
+   </a>
+   <div class="p">
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     —NoTeko,
+    </div>
+    <div class="txs" id="T15b">
+     xikiknomati notelpoch,
+    </div>
+    <div class="txs" id="T15c">
+     porke mimiki iva sa panova tlajyovia,
+    </div>
+    <div class="txs" id="T15d">
+     yi miek welta vetzi ijtik tlitl iva ijtik atl.
+    </div>
+    <span id="bookmarks15">
+    </span>
+    <a id="v16">
+    </a>
+    <div class="txs" id="T16">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Onikinvalikili tlen tikinmachtia pero amo veli kipajtiah.
+    </div>
+    <span id="bookmarks16">
+    </span>
+   </div>
+   <span id="bookmarks16">
+   </span>
+   <a id="v17">
+   </a>
+   <div class="p">
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús okijto:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T17b">
+     —¡Imejvah seppa amo intlaneltokah iva yonmijtlakavkeh!
+    </div>
+    <div class="txs" id="T17c">
+     ¿Asta keman nietos imovah?
+    </div>
+    <div class="txs" id="T17d">
+     ¿Asta keman nimechxikojtos?
+    </div>
+    <div class="txs" id="T17e">
+     Nika techvalikilikah in telpochtli.
+    </div>
+    <span id="bookmarks17">
+    </span>
+   </div>
+   <span id="bookmarks17">
+   </span>
+   <a id="v18">
+   </a>
+   <div class="p">
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó Jesús okajvak in amo kuali ejekatl iva okiski de ijtik in telpochtli,
+    </div>
+    <div class="txs" id="T18b">
+     iva san nima ijkuakó opajtik.
+    </div>
+    <span id="bookmarks18">
+    </span>
+   </div>
+   <span id="bookmarks18">
+   </span>
+   <a id="v19">
+   </a>
+   <div class="p">
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Satepa in momachtijkeh omotlapovitoh se lado ivan Jesús.
+    </div>
+    <div class="txs" id="T19b">
+     Iva okitlajtlanijkeh:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T19c">
+     —¿Tleka tejvah amo otivelikeh otikixtijkeh in amo kuali ejekatl?
+    </div>
+    <span id="bookmarks19">
+    </span>
+   </div>
+   <span id="bookmarks19">
+   </span>
+   <a id="v20">
+   </a>
+   <div class="p">
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús okinmilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T20b">
+     —Porke ok imechpolova miek para intlaneltokaskeh kemi moneki.
+    </div>
+    <div class="txs" id="T20c">
+     Yi neli nimechilvia tla imejvah intlaneltokaskeh kemi moneki,
+    </div>
+    <div class="txs" id="T20d">
+     maski imotlaneltokalis ma yeto tzikitzi kemi se semiyajtzi de mostaza,
+    </div>
+    <div class="txs" id="T20e">
+     oveliskia onkilviskiah nin tepetl:
+    </div>
+    <div class="txs" id="T20f">
+     “Ximijkuani de nika iva xivia ik nepa.”
+    </div>
+    <div class="txs" id="T20g">
+     In tepetl omoijkuaniskia,
+    </div>
+    <div class="txs" id="T20h">
+     iva nochi oveliskia onkichivaskiah.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Pero nin tlamantli de amo kuali ejekameh velis se kinkixtis san ika diostzajtzilistli iva ika mosavalistli.
+    </div>
+    <span id="bookmarks21">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s3">
+     Jesús oksemi okinmilvi kenik ixpolivis
+    </div>
+   </div>
+   <div class="r">
+    <div id="r3">
+     (
+     <span class="reflink">
+      <a href="nsu-41-MRK-009.html#v30">
+       Mr. 9:30-32
+      </a>
+     </span>
+     ;
+     <span class="reflink">
+      <a href="nsu-42-LUK-009.html#v43">
+       Lc. 9:43-45
+      </a>
+     </span>
+     )
+    </div>
+   </div>
+   <span id="bookmarks21">
+   </span>
+   <a id="v22">
+   </a>
+   <div class="p">
+    <div class="txs" id="T22a">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Se tonali ijkuak ok okatkah kan región de Galilea,
+    </div>
+    <div class="txs" id="T22b">
+     Jesús okinmilvi in momachtijkeh ke iKone in Tlakatl kitemaktiskeh inmak in tlaltikpaktlakah,
+    </div>
+    <span id="bookmarks22">
+    </span>
+    <a id="v23">
+    </a>
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     iva kixpoloskeh,
+    </div>
+    <div class="txs" id="T23b">
+     pero ipan eyi tonali moyolitis.
+    </div>
+    <div class="txs" id="T23c">
+     Iva in momachtijkeh sa tlawel omoyolkokojkeh ijkuak ijkó okikakkeh.
+    </div>
+    <span id="bookmarks23">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s4">
+     Jesús okitlaxtla impuesto para in templo
+    </div>
+   </div>
+   <span id="bookmarks23">
+   </span>
+   <a id="v24">
+   </a>
+   <div class="p">
+    <div class="txs" id="T24a">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak Jesús ivan momachtijkeh oajsitoh Capernaum,
+    </div>
+    <div class="txs" id="T24b">
+     tlen kobradortih de impuestos de kan templo oyajkeh okittatoh in Pedro,
+    </div>
+    <div class="txs" id="T24c">
+     iva okitlajtlanijkeh:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T24d">
+     —¿Imotlamachti kox kitlaxtlava impuesto para in templo?
+    </div>
+    <span id="bookmarks24">
+    </span>
+   </div>
+   <span id="bookmarks24">
+   </span>
+   <a id="v25">
+   </a>
+   <div class="p">
+    <div class="txs" id="T25a">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Pedro otlanankili:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T25b">
+     —Kema.
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T25c">
+     Iva ijkuak Pedro okalakki kalijtik,
+    </div>
+    <div class="txs" id="T25d">
+     yen Jesús achto okitlajtlani:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T25e">
+     —¿Kenomi tikitta,
+    </div>
+    <div class="txs" id="T25f">
+     Simón?
+    </div>
+    <div class="txs" id="T25g">
+     In wejwei tlanavatijkeh de nin tlaltikpaktli,
+    </div>
+    <div class="txs" id="T25h">
+     ¿akinmeh kinkobrarovah impuesto?
+    </div>
+    <div class="txs" id="T25i">
+     ¿Kinkobrarovah in gentejtih de inpaís o noso tlen vitzeh de oksé país?
+    </div>
+    <span id="bookmarks25">
+    </span>
+   </div>
+   <span id="bookmarks25">
+   </span>
+   <a id="v26">
+   </a>
+   <div class="p">
+    <div class="txs" id="T26a">
+     <span class="v">
+      26
+     </span>
+     <span class="vsp">
+     </span>
+     Pedro okinankili:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T26b">
+     —Tlen vitzeh de oksé país.
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T26c">
+     Jesús okilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T26d">
+     —Tonses kijtosneki ke in gentejtih tlen povih itech inpaís amo kipia de kitlaxtlavaskeh.
+    </div>
+    <span id="bookmarks26">
+    </span>
+    <a id="v27">
+    </a>
+    <div class="txs" id="T27a">
+     <span class="v">
+      27
+     </span>
+     <span class="vsp">
+     </span>
+     Pero maski amo techtokarova de tiktlaxtlavaskeh,
+    </div>
+    <div class="txs" id="T27b">
+     iva para amika ma kualani,
+    </div>
+    <div class="txs" id="T27c">
+     xivia kan atl tlen wei,
+    </div>
+    <div class="txs" id="T27d">
+     xikajkava moansuelo ijtik atl,
+    </div>
+    <div class="txs" id="T27e">
+     iva in michi tlen achto tikixtis,
+    </div>
+    <div class="txs" id="T27f">
+     xiktlapoli ikamak iva ijtik tikajsis se tomi,
+    </div>
+    <div class="txs" id="T27g">
+     iva ika xiktlaxtlava tlen de Ne noimpuesto iva tlen de te moimpuesto.
+    </div>
+    <span id="bookmarks27">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2017,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2016,
+      <a class="web-link" href="https://live.bible.is/bible/NSUWBT/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nsu&amp;ISO_ROD_index=124">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de la Sierra Negra.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://cloud.faithcomesbyhearing.com/mp3audiobibles2/NSUWBTN2DA/B01___17_San_Mateo___NSUWBTN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

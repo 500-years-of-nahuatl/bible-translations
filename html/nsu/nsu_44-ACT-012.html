@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#083F0E" name="theme-color"/>
+  <title>
+   Hechos 12
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0.3, end: 5.35 },
+    { label: "1b", start: 5.6, end: 10.99 },
+    { label: "2", start: 11.24, end: 15.79 },
+    { label: "3a", start: 16.04, end: 18.25 },
+    { label: "3b", start: 18.5, end: 21.05 },
+    { label: "3c", start: 21.3, end: 26.07 },
+    { label: "4a", start: 26.32, end: 28.33 },
+    { label: "4b", start: 28.58, end: 29.87 },
+    { label: "4c", start: 30.12, end: 34.23 },
+    { label: "4d", start: 34.48, end: 38.95 },
+    { label: "5a", start: 39.2, end: 43.53 },
+    { label: "5b", start: 43.78, end: 49.55 },
+    { label: "6a", start: 49.8, end: 53.85 },
+    { label: "6b", start: 54.1, end: 60.85 },
+    { label: "6c", start: 61.1, end: 66.51 },
+    { label: "7a", start: 66.76, end: 73.21 },
+    { label: "7b", start: 73.46, end: 77.35 },
+    { label: "7c", start: 77.6, end: 79.41 },
+    { label: "7d", start: 79.66, end: 81.19 },
+    { label: "7e", start: 81.44, end: 86.11 },
+    { label: "8a", start: 86.36, end: 89.27 },
+    { label: "8b", start: 89.52, end: 91.65 },
+    { label: "8c", start: 91.9, end: 93.45 },
+    { label: "8d", start: 93.7, end: 96.29 },
+    { label: "8e", start: 96.54, end: 99.19 },
+    { label: "9a", start: 99.44, end: 101.93 },
+    { label: "9b", start: 102.18, end: 108.51 },
+    { label: "10a", start: 108.76, end: 115.31 },
+    { label: "10b", start: 115.56, end: 120.53 },
+    { label: "10c", start: 120.78, end: 122.77 },
+    { label: "10d", start: 123.02, end: 125.45 },
+    { label: "10e", start: 125.7, end: 128.27 },
+    { label: "10f", start: 128.52, end: 133.09 },
+    { label: "11a", start: 133.34, end: 136.43 },
+    { label: "11b", start: 136.68, end: 137.67 },
+    { label: "11c", start: 137.92, end: 144.67 },
+    { label: "11d", start: 144.92, end: 147.61 },
+    { label: "12a", start: 147.86, end: 150.97 },
+    { label: "12b", start: 151.22, end: 153.11 },
+    { label: "12c", start: 153.36, end: 154.31 },
+    { label: "12d", start: 154.56, end: 156.41 },
+    { label: "12e", start: 156.66, end: 160.55 },
+    { label: "13a", start: 160.8, end: 164.39 },
+    { label: "13b", start: 164.64, end: 168.93 },
+    { label: "14a", start: 169.18, end: 171.39 },
+    { label: "14b", start: 171.64, end: 174.39 },
+    { label: "14c", start: 174.64, end: 178.71 },
+    { label: "15a", start: 178.96, end: 181.07 },
+    { label: "15b", start: 181.32, end: 182.69 },
+    { label: "15c", start: 182.94, end: 184.97 },
+    { label: "15d", start: 185.22, end: 186.75 },
+    { label: "15e", start: 187, end: 190.57 },
+    { label: "16a", start: 190.82, end: 193.67 },
+    { label: "16b", start: 193.92, end: 195.61 },
+    { label: "16c", start: 195.86, end: 198.01 },
+    { label: "17a", start: 198.26, end: 202.29 },
+    { label: "17b", start: 202.54, end: 206.27 },
+    { label: "17c", start: 206.52, end: 207.63 },
+    { label: "17d", start: 207.88, end: 213.23 },
+    { label: "17e", start: 213.48, end: 217.03 },
+    { label: "18a", start: 217.28, end: 218.61 },
+    { label: "18b", start: 218.86, end: 224.43 },
+    { label: "19a", start: 224.68, end: 227.39 },
+    { label: "19b", start: 227.64, end: 228.83 },
+    { label: "19c", start: 229.08, end: 233.33 },
+    { label: "19d", start: 233.58, end: 237.85 },
+    { label: "20a", start: 238.1, end: 242.33 },
+    { label: "20b", start: 242.58, end: 246.73 },
+    { label: "20c", start: 246.98, end: 250.77 },
+    { label: "20d", start: 251.02, end: 255.45 },
+    { label: "20e", start: 255.7, end: 261.19 },
+    { label: "21a", start: 261.44, end: 264.99 },
+    { label: "21b", start: 265.24, end: 266.19 },
+    { label: "21c", start: 266.44, end: 271.39 },
+    { label: "21d", start: 271.64, end: 273.11 },
+    { label: "22a", start: 273.36, end: 276.51 },
+    { label: "22b", start: 276.76, end: 277.87 },
+    { label: "22c", start: 278.12, end: 280.35 },
+    { label: "23a", start: 280.6, end: 282.39 },
+    { label: "23b", start: 282.64, end: 286.23 },
+    { label: "23c", start: 286.48, end: 288.57 },
+    { label: "23d", start: 288.82, end: 290.95 },
+    { label: "24", start: 291.2, end: 297.19 },
+    { label: "25a", start: 297.44, end: 301.87 },
+    { label: "25b", start: 302.12, end: 303.63 },
+    { label: "25c", start: 303.88, end: 307.97 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "nsu-44-ACT-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nsu-43-JHN-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-44-ACT-011.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      Hechos
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      12
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-44-ACT-013.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-45-ROM-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Jacobo okimiktijkeh iva Pedro okitzakeh
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     12
+    </div>
+    <div class="txs" id="T1a">
+     Noijki itech yejonmeh tonaltih,
+    </div>
+    <div class="txs" id="T1b">
+     in wei tlanavati Herodes ope kinchochololtia sekimeh tlaneltokakeh para kintlajyoviltis.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Herodes otlanavati ma kimiktikah ika espada in Jacobo ikni in Juan.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Komo okittak okinpakti in judiojtih,
+    </div>
+    <div class="txs" id="T3b">
+     tonses noijki otlanavati ma kitzkikah in Pedro.
+    </div>
+    <div class="txs" id="T3c">
+     Ijkó opanolok mero itech ilvitl ijkuak mokua in pan tlen amo kipia xokotixtli.
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak Herodes okikitzki in Pedro,
+    </div>
+    <div class="txs" id="T4b">
+     okitzaki telpiloya.
+    </div>
+    <div class="txs" id="T4c">
+     Okintlali navi grupos de nanavi soldadojtih para ma kikuidarojtokah.
+    </div>
+    <div class="txs" id="T4d">
+     Herodes okijto kinmixpantilis in gentejtih san ma pano in ilvitl de pascua.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     In soldadojtih kuali okikuidarojtokah in Pedro kan telpiloya.
+    </div>
+    <div class="txs" id="T5b">
+     Pero in toknivah tlaneltokakeh amo okavayah de omodiostzajtziliayah inavak Dios por yen Pedro.
+    </div>
+    <span id="bookmarks5">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Dios okikixti in Pedro de kan telpiloya
+    </div>
+   </div>
+   <span id="bookmarks5">
+   </span>
+   <a id="v6">
+   </a>
+   <div class="p">
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Yejón yovak antes de tlanesis para Herodes kinmixpantilis in gentejtih,
+    </div>
+    <div class="txs" id="T6b">
+     Pedro okochtoka ilpitok ika ome kadenajtih iva okikuidarojtokah ome soldadojtih ik inajnakastla,
+    </div>
+    <div class="txs" id="T6c">
+     iva oksekimeh soldadojtih okatkah kaltempa de kan telpiloya otlakuidarojtokah.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó ovalmonexti se iilvikaktlatitlanil in toTeko iva otlapetlanki ijtik telpiloya.
+    </div>
+    <div class="txs" id="T7b">
+     In ilvikaktlatitlanili okitilko in Pedro kan iomijsikuilpa,
+    </div>
+    <div class="txs" id="T7c">
+     okijxiti iva okilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T7d">
+     —¡Ximeva totoka!
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T7e">
+     Iva in kadenajtih tlen ika oilpitoka itech imavah in Pedro ovetzkeh.
+    </div>
+    <span id="bookmarks7">
+    </span>
+    <a id="v8">
+    </a>
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     In ilvikaktlatitlanili okilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T8b">
+     —Ximotzotzolti iva ximokakti.
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T8c">
+     Pedro ijkó okichi,
+    </div>
+    <div class="txs" id="T8d">
+     iva in ilvikaktlatitlanili oksemi okilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T8e">
+     —Xikmokenti motlaken iva xiviki nova.
+    </div>
+    <span id="bookmarks8">
+    </span>
+   </div>
+   <span id="bookmarks8">
+   </span>
+   <a id="v9">
+   </a>
+   <div class="p">
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     Pedro oyá ivan ilvikaktlatitlanili,
+    </div>
+    <div class="txs" id="T9b">
+     iva amo okimatia kox yi neli tlen otlamochijtoka o noso xamo san okittaya se tetzavistlachialistli.
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Okipanavijkeh tlen primer grupo de soldadojtih tlen otlakuidarojtokah iva satepa okipanavijkeh oksé grupo,
+    </div>
+    <div class="txs" id="T10b">
+     iva para ompa oajsitoh kan wei puerta de tepostli kan se kisa para kan siudad.
+    </div>
+    <div class="txs" id="T10c">
+     In puerta omotlapo iselti,
+    </div>
+    <div class="txs" id="T10d">
+     in ilvikaktlatitlanili ivan Pedro okiskeh,
+    </div>
+    <div class="txs" id="T10e">
+     iva satepa de okipanavijkeh se kaye,
+    </div>
+    <div class="txs" id="T10f">
+     in ilvikaktlatitlanili san ovalpolivik iva Pedro omoka iselti.
+    </div>
+    <span id="bookmarks10">
+    </span>
+    <a id="v11">
+    </a>
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó Pedro okimomakak kuenta tlen opanolok,
+    </div>
+    <div class="txs" id="T11b">
+     iva okijto:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T11c">
+     —Axka yi neli nikajsikamati nik in toTeko okivaltitlanki iilvikaktlatitlanil para nechmakixtis de imak Herodes,
+    </div>
+    <div class="txs" id="T11d">
+     iva de tlen okinekiah nechtoktiskeh in judiojtih.
+    </div>
+    <span id="bookmarks11">
+    </span>
+   </div>
+   <span id="bookmarks11">
+   </span>
+   <a id="v12">
+   </a>
+   <div class="p">
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak Pedro okimomakak kuenta de yejón tlamantli,
+    </div>
+    <div class="txs" id="T12b">
+     oyá para kan ikalijtik in María,
+    </div>
+    <div class="txs" id="T12c">
+     imama in Juan,
+    </div>
+    <div class="txs" id="T12d">
+     tlen noijki okinotzayah Marcos,
+    </div>
+    <div class="txs" id="T12e">
+     kan miekeh oololitokah omodiostzajtzilijtokah.
+    </div>
+    <span id="bookmarks12">
+    </span>
+    <a id="v13">
+    </a>
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak Pedro okitokaro in puerta de kan kiavak,
+    </div>
+    <div class="txs" id="T13b">
+     se ichpochtli itoka Rode oyá otlachiato akin tlatokarova.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak okitenkaki nik yen Pedro,
+    </div>
+    <div class="txs" id="T14b">
+     sa tlawel opakki asta amo okitlatlapoli,
+    </div>
+    <div class="txs" id="T14c">
+     yej omotlelo kalijtik okinmilvito nik in Pedro kajki kan puerta.
+    </div>
+    <span id="bookmarks14">
+    </span>
+    <a id="v15">
+    </a>
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó okilvijkeh in Rode:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T15b">
+     —¡Te tiloka!
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T15c">
+     Pero ye okinmilvi nik yi neli.
+    </div>
+    <div class="txs" id="T15d">
+     Iva yejvah okijtojkeh:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T15e">
+     —Xamo yen ilvikaktlatitlanili tlen kipalevia.
+    </div>
+    <span id="bookmarks15">
+    </span>
+   </div>
+   <span id="bookmarks15">
+   </span>
+   <a id="v16">
+   </a>
+   <div class="p">
+    <div class="txs" id="T16a">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Pedro ok otlatokarojtoka kan puerta.
+    </div>
+    <div class="txs" id="T16b">
+     Iva ijkuak okitlatlapolijkeh,
+    </div>
+    <div class="txs" id="T16c">
+     okittakeh iva sa otlatlachixkeh.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Pero ye okinchivili señas ika ima de ma motenkavakah,
+    </div>
+    <div class="txs" id="T17b">
+     iva okintlapovi de kenik in toTeko okikixti de kan telpiloya.
+    </div>
+    <div class="txs" id="T17c">
+     Iva okinmilvi:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T17d">
+     —Xiktlapovikah in Jacobo iva noijki in toknivah tlaneltokakeh de tlan onechpanolok.
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T17e">
+     Satepa okiski de ompa iva oyá oksé lugar.
+    </div>
+    <span id="bookmarks17">
+    </span>
+   </div>
+   <span id="bookmarks17">
+   </span>
+   <a id="v18">
+   </a>
+   <div class="p">
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak otlaneski,
+    </div>
+    <div class="txs" id="T18b">
+     in soldadojtih ope mopajsolovah sa tlawel porke amo okimatiah kanik oyá in Pedro.
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Herodes otlanavati kuali ma kitemokah,
+    </div>
+    <div class="txs" id="T19b">
+     pero amo okajsikeh.
+    </div>
+    <div class="txs" id="T19c">
+     Okintlatzintoki in soldadojtih iva satepa otlanavati ma kinmiktikah.
+    </div>
+    <div class="txs" id="T19d">
+     Satepa Herodes okiski de Judea iva oyá ochantito Cesarea.
+    </div>
+    <span id="bookmarks19">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s3">
+     Herodes omikki
+    </div>
+   </div>
+   <span id="bookmarks19">
+   </span>
+   <a id="v20">
+   </a>
+   <div class="p">
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Herodes okualantoka innavak in gente de Tiro iva de Sidón,
+    </div>
+    <div class="txs" id="T20b">
+     pero in gentejtih omotlatlalvijkeh yaskeh kittativih in Herodes asta Cesarea.
+    </div>
+    <div class="txs" id="T20c">
+     Se itlakeval in Herodes tlen okachi tlayakantok itoka Blasto,
+    </div>
+    <div class="txs" id="T20d">
+     okichijkeh inyolikni para ye ma kitlapovi in Herodes para ayakmo ma kualani,
+    </div>
+    <div class="txs" id="T20e">
+     porke in gentejtih de Tiro iva de Sidón nochi tlen okuayah ovalaya de ipaís in Herodes.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Herodes okitlali se tonali para invah motlapovis.
+    </div>
+    <div class="txs" id="T21b">
+     Iva yejón tonali,
+    </div>
+    <div class="txs" id="T21c">
+     Herodes omotzotzolti kemi wei tlanavati iva omotlali kan teyekankavah,
+    </div>
+    <div class="txs" id="T21d">
+     iva ope kintlapovia.
+    </div>
+    <span id="bookmarks21">
+    </span>
+    <a id="v22">
+    </a>
+    <div class="txs" id="T22a">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó in gentejtih ope tzajtzih chikavak:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T22b">
+     —¡Nin tlen techtlapovijtok,
+    </div>
+    <div class="txs" id="T22c">
+     amo se tlakatl sino se dios!
+    </div>
+    <span id="bookmarks22">
+    </span>
+   </div>
+   <span id="bookmarks22">
+   </span>
+   <a id="v23">
+   </a>
+   <div class="p">
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     San nima ijkuakó,
+    </div>
+    <div class="txs" id="T23b">
+     iilvikaktlatitlanil in toTeko okichi in Herodes ma valmokoko,
+    </div>
+    <div class="txs" id="T23c">
+     porke amo okiweijkachi in Dios,
+    </div>
+    <div class="txs" id="T23d">
+     ochakalovak iva omikki.
+    </div>
+    <span id="bookmarks23">
+    </span>
+   </div>
+   <span id="bookmarks23">
+   </span>
+   <a id="v24">
+   </a>
+   <div class="p">
+    <div class="txs" id="T24">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Itlajtol in Dios okachi oxitinki iva in tlaneltokakeh okachi omomiekiliayah.
+    </div>
+    <span id="bookmarks24">
+    </span>
+   </div>
+   <span id="bookmarks24">
+   </span>
+   <a id="v25">
+   </a>
+   <div class="p">
+    <div class="txs" id="T25a">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak Bernabé ivan Saulo yokitlamijkeh intekiv ne Jerusalén,
+    </div>
+    <div class="txs" id="T25b">
+     omokuapkeh para Antioquía.
+    </div>
+    <div class="txs" id="T25c">
+     Okivikayah in Juan tlen noijki okinotzayah Marcos.
+    </div>
+    <span id="bookmarks25">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2017,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2016,
+      <a class="web-link" href="https://live.bible.is/bible/NSUWBT/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nsu&amp;ISO_ROD_index=124">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de la Sierra Negra.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://cloud.faithcomesbyhearing.com/mp3audiobibles2/NSUWBTN2DA/B05___12_Hechos______NSUWBTN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#083F0E" name="theme-color"/>
+  <title>
+   Filipenses 3
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.76, end: 4.15 },
+    { label: "1b", start: 4.4, end: 4.73 },
+    { label: "1c", start: 4.98, end: 6.93 },
+    { label: "1d", start: 7.18, end: 11.35 },
+    { label: "1e", start: 11.6, end: 13.69 },
+    { label: "2a", start: 13.94, end: 16.45 },
+    { label: "2b", start: 16.7, end: 18.27 },
+    { label: "2c", start: 18.52, end: 23.31 },
+    { label: "3a", start: 23.56, end: 26.13 },
+    { label: "3b", start: 26.38, end: 30.83 },
+    { label: "3c", start: 31.08, end: 34.57 },
+    { label: "3d", start: 34.82, end: 37.97 },
+    { label: "4a", start: 38.22, end: 41.93 },
+    { label: "4b", start: 42.18, end: 44.65 },
+    { label: "4c", start: 44.9, end: 48.29 },
+    { label: "4d", start: 48.54, end: 49.51 },
+    { label: "5a", start: 49.76, end: 54.17 },
+    { label: "5b", start: 54.42, end: 56.19 },
+    { label: "5c", start: 56.44, end: 58.63 },
+    { label: "5d", start: 58.88, end: 62.35 },
+    { label: "5e", start: 62.6, end: 64.21 },
+    { label: "5f", start: 64.46, end: 68.05 },
+    { label: "6a", start: 68.3, end: 73.57 },
+    { label: "6b", start: 73.82, end: 77.25 },
+    { label: "6c", start: 77.5, end: 81.47 },
+    { label: "7a", start: 81.72, end: 82.19 },
+    { label: "7b", start: 82.44, end: 84.01 },
+    { label: "7c", start: 84.26, end: 88.45 },
+    { label: "8a", start: 88.7, end: 89.45 },
+    { label: "8b", start: 89.7, end: 97.27 },
+    { label: "8c", start: 97.52, end: 98.37 },
+    { label: "8d", start: 98.62, end: 102.87 },
+    { label: "8e", start: 103.12, end: 104.87 },
+    { label: "9a", start: 105.12, end: 106.31 },
+    { label: "9b", start: 106.56, end: 112.31 },
+    { label: "9c", start: 112.56, end: 117.05 },
+    { label: "9d", start: 117.3, end: 121.79 },
+    { label: "10a", start: 122.04, end: 124.35 },
+    { label: "10b", start: 124.6, end: 127.71 },
+    { label: "10c", start: 127.96, end: 130.25 },
+    { label: "10d", start: 130.5, end: 132.77 },
+    { label: "11", start: 133.02, end: 136.93 },
+    { label: "12a", start: 137.18, end: 140.37 },
+    { label: "12b", start: 140.62, end: 143.25 },
+    { label: "12c", start: 143.5, end: 147.29 },
+    { label: "12d", start: 147.54, end: 150.43 },
+    { label: "13a", start: 150.68, end: 151.65 },
+    { label: "13b", start: 151.9, end: 153.97 },
+    { label: "13c", start: 154.22, end: 159.87 },
+    { label: "14a", start: 160.12, end: 163.31 },
+    { label: "14b", start: 163.56, end: 166.27 },
+    { label: "14c", start: 166.52, end: 172.15 },
+    { label: "15a", start: 172.4, end: 172.83 },
+    { label: "15b", start: 173.08, end: 177.23 },
+    { label: "15c", start: 177.48, end: 180.55 },
+    { label: "15d", start: 180.8, end: 184.51 },
+    { label: "16", start: 184.76, end: 189.75 },
+    { label: "17a", start: 190, end: 190.91 },
+    { label: "17b", start: 191.16, end: 193.41 },
+    { label: "17c", start: 193.66, end: 198.71 },
+    { label: "18a", start: 198.96, end: 201.05 },
+    { label: "18b", start: 201.3, end: 204.03 },
+    { label: "18c", start: 204.28, end: 211.65 },
+    { label: "19a", start: 211.9, end: 213.75 },
+    { label: "19b", start: 214, end: 218.65 },
+    { label: "19c", start: 218.9, end: 222.21 },
+    { label: "19d", start: 222.46, end: 225.87 },
+    { label: "20a", start: 226.12, end: 228.19 },
+    { label: "20b", start: 228.44, end: 231.35 },
+    { label: "20c", start: 231.6, end: 233.49 },
+    { label: "21a", start: 233.74, end: 237.17 },
+    { label: "21b", start: 237.42, end: 241.85 },
+    { label: "21c", start: 242.1, end: 247.29 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 4 }];
+var hasIntro = false;
+var baseRef  = "nsu-50-PHP-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nsu-49-EPH-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-50-PHP-002.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      Filipenses
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      3
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-50-PHP-004.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-51-COL-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Nikneki nikixmatis okachi in Cristo
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     3
+    </div>
+    <div class="txs" id="T1a">
+     Iva axka,
+    </div>
+    <div class="txs" id="T1b">
+     noknivah,
+    </div>
+    <div class="txs" id="T1c">
+     ¡xipakikah inavak toTeko!
+    </div>
+    <div class="txs" id="T1d">
+     Ne amo nimosotlava para oksemi nimechilvis tlen achto yonimechijkuilili,
+    </div>
+    <div class="txs" id="T1e">
+     porke yejón se kuali para imejvah.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Ximotlachilikah de nekateh itzkuinmeh,
+    </div>
+    <div class="txs" id="T2b">
+     tlen kichivah tlen amo kuali,
+    </div>
+    <div class="txs" id="T2c">
+     tlen kijtovah moneki inmosirkunsidaroskeh para toYejwatzi velis imechmakixtis.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Porke yen tejvah tlen yi neli tisirkunsidadojtih,
+    </div>
+    <div class="txs" id="T3b">
+     tejvah tlen techyakana in Tioijyotzintli para tikmavistiliah in toYejwatzi,
+    </div>
+    <div class="txs" id="T3c">
+     iva kuali timomachiliah porke tipovih inavak Jesucristo,
+    </div>
+    <div class="txs" id="T3d">
+     iva amo timotenmachiah itech tonechikavalis.
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Maski ne oveliskia onimotenmachiskia itech nonechikavalis,
+    </div>
+    <div class="txs" id="T4b">
+     ne amo nimotenmachia itech yejón tlamantli.
+    </div>
+    <div class="txs" id="T4c">
+     Tla íkka kiyejyekova ke velis motenmachis itech inechikavalis,
+    </div>
+    <div class="txs" id="T4d">
+     ne okachi.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Porke ne onechsirkunsidarojkeh ipan chikueyi tonali de ijkuak onineski.
+    </div>
+    <div class="txs" id="T5b">
+     Ne nivalajtok de Israel,
+    </div>
+    <div class="txs" id="T5c">
+     iva nivalajtok familia de Benjamín.
+    </div>
+    <div class="txs" id="T5d">
+     Ne onineski nihebreo porke notajvah hebreos.
+    </div>
+    <div class="txs" id="T5e">
+     Ne onikatka nifariseo,
+    </div>
+    <div class="txs" id="T5f">
+     iva onikvelkaki itlanavatil Moisés kemi se fariseo.
+    </div>
+    <span id="bookmarks5">
+    </span>
+    <a id="v6">
+    </a>
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Sa tlawel onikchavatiliaya notiotlamachtil asta onikinchochololtiaya in tlaneltokakeh de Cristo.
+    </div>
+    <div class="txs" id="T6b">
+     Iva amika ovelia onechtlajtlakoltiaya de itla,
+    </div>
+    <div class="txs" id="T6c">
+     porke ne yi neli onikchivaya nochi tlen kijtova itlanavatil Moisés.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Pero,
+    </div>
+    <div class="txs" id="T7b">
+     por tlen Cristo okichi por ne,
+    </div>
+    <div class="txs" id="T7c">
+     axka nikitta ke amitla ipati tlen achto onikittaya kemi miek ipati.
+    </div>
+    <span id="bookmarks7">
+    </span>
+    <a id="v8">
+    </a>
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Yi neli,
+    </div>
+    <div class="txs" id="T8b">
+     nochi tlen okseki tlamantli nikitta amitla ipati ijkuak se kiparejarova ivan tlen yi neli miek ipati de se kixmatis in Cristo Jesús,
+    </div>
+    <div class="txs" id="T8c">
+     noTeko.
+    </div>
+    <div class="txs" id="T8d">
+     Por yen Cristo onikka nochi neká tlamantli iva nikitta sa kemi tlajsoli,
+    </div>
+    <div class="txs" id="T8e">
+     para velis nikmotlanilis in Cristo
+    </div>
+    <span id="bookmarks8">
+    </span>
+    <a id="v9">
+    </a>
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     iva nisetitos Iva.
+    </div>
+    <div class="txs" id="T9b">
+     ToYejwatzi amo onechseliskia kemi nitlakamela san por onikchivaskia tlen kijtova itlanavatil Moisés,
+    </div>
+    <div class="txs" id="T9c">
+     sino toYejwatzi onechseli kemi nitlakamela porke onitlaneltokak inavak Cristo.
+    </div>
+    <div class="txs" id="T9d">
+     Yen yejón tlakamelajkayotl tlen toYejwatzi techmaka por yen totlaneltokalis.
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Ne nikneki nikixmatis okachi in Cristo.
+    </div>
+    <div class="txs" id="T10b">
+     Nikneki nikmachilis ivelitilis tlen ika omoyoliti.
+    </div>
+    <div class="txs" id="T10c">
+     Nikneki nitlajyovis kemi Ye otlajyovi,
+    </div>
+    <div class="txs" id="T10d">
+     iva asta niixpolivis kemi Ye oixpolivik,
+    </div>
+    <span id="bookmarks10">
+    </span>
+    <a id="v11">
+    </a>
+    <div class="txs" id="T11">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     iva ijkó nikchia nimoyolitis ijkuak moyolitiskeh nochtin mikameh.
+    </div>
+    <span id="bookmarks11">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Ma tajsitih kan Dios kineki
+    </div>
+   </div>
+   <span id="bookmarks11">
+   </span>
+   <a id="v12">
+   </a>
+   <div class="p">
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Amo nikneki nikijtos ke yi nikpia nochi yejón tlen nikijtova,
+    </div>
+    <div class="txs" id="T12b">
+     iva nion amo nikijtova ke ya niyektik.
+    </div>
+    <div class="txs" id="T12c">
+     Pero ne niav para tlayakapa para nikmoaxkatis yejón tlen yektik,
+    </div>
+    <div class="txs" id="T12d">
+     porke para yejón Cristo nik onechmoaxkati.
+    </div>
+    <span id="bookmarks12">
+    </span>
+    <a id="v13">
+    </a>
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Noknivah,
+    </div>
+    <div class="txs" id="T13b">
+     ayamo nikajsi yejón tlen yektik.
+    </div>
+    <div class="txs" id="T13c">
+     Pero ne nikchiva de nikilkava tlen yomoka iva nimochijchikava para nikajsiti tlen kajki tlayakapa.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Iva ijkó kemi tlen motlelovah itech se netlelolistli,
+    </div>
+    <div class="txs" id="T14b">
+     ne noijki nimochijchikava para najsiti kan moneki,
+    </div>
+    <div class="txs" id="T14c">
+     iva ijkó nikselis in tlatliokolili tlen toYejwatzi technotza ma tikselikah por yen Cristo Jesús.
+    </div>
+    <span id="bookmarks14">
+    </span>
+   </div>
+   <span id="bookmarks14">
+   </span>
+   <a id="v15">
+   </a>
+   <div class="p">
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     Tonses,
+    </div>
+    <div class="txs" id="T15b">
+     tinochtin tlen yi tichikavakeh itech totlaneltokalis moneki ijkó ma tikyejyekokah.
+    </div>
+    <div class="txs" id="T15c">
+     Iva tla imejvah ayamo ijkó inkiyejyekovah,
+    </div>
+    <div class="txs" id="T15d">
+     in toYejwatzi imechajsikamatiltis para xikyejyekokah kemi Ye kineki.
+    </div>
+    <span id="bookmarks15">
+    </span>
+    <a id="v16">
+    </a>
+    <div class="txs" id="T16">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Pero moneki ma tikseguirokah ma tinemikah itech tlen melajkayotl asta kan yi tajsitivih.
+    </div>
+    <span id="bookmarks16">
+    </span>
+   </div>
+   <span id="bookmarks16">
+   </span>
+   <a id="v17">
+   </a>
+   <div class="p">
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Noknivah,
+    </div>
+    <div class="txs" id="T17b">
+     imejvah xikchivakah kemin ne nikchiva.
+    </div>
+    <div class="txs" id="T17c">
+     Iva xikinmitakah tlen nemih ijkó kemi tejvah tinemih para imejvah no ijkó xinemikah.
+    </div>
+    <span id="bookmarks17">
+    </span>
+    <a id="v18">
+    </a>
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Ne yi miek welta yonimechilvi,
+    </div>
+    <div class="txs" id="T18b">
+     iva axka oksemi nimechilvia ika chokalistli,
+    </div>
+    <div class="txs" id="T18c">
+     ke kateh miekeh tlen ika innemilis kiteititiah nik yi neli kitlavelitah in Cristo tlen oixpolivik itech krus por tejvah.
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Yejvah yavih kan teixpolojka.
+    </div>
+    <div class="txs" id="T19b">
+     Kinekih kipaktiskeh tlen kineki inkuerpo iva yen yejón kichivah kemi indios.
+    </div>
+    <div class="txs" id="T19c">
+     Omonekia ika omopinavaskiah tlen ika moweinekih.
+    </div>
+    <div class="txs" id="T19d">
+     San puro kiyejyekojtokeh tlen onka itech nin tlaltikpaktli.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Pero tejvah tipovih de ilvikak.
+    </div>
+    <div class="txs" id="T20b">
+     Iva tikchixtokeh ma viki de ilvikak tlen toTemakixti,
+    </div>
+    <div class="txs" id="T20c">
+     in toTeko Jesucristo.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Ye techpatilis tokuerpo tlen amo chikavak iva miki,
+    </div>
+    <div class="txs" id="T21b">
+     iva techmakas se kuerpo yankuik kemi Ye ikuerpo tlen kipia mavistilistli.
+    </div>
+    <div class="txs" id="T21c">
+     Iva kichivas ika ivelitilis tlen ika kinavatia nochi tlamantli tlen onka.
+    </div>
+    <span id="bookmarks21">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2017,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2016,
+      <a class="web-link" href="https://live.bible.is/bible/NSUWBT/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nsu&amp;ISO_ROD_index=124">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de la Sierra Negra.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://cloud.faithcomesbyhearing.com/mp3audiobibles2/NSUWBTN2DA/B11___03_Filipenses__NSUWBTN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

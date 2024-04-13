@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#F0B607" name="theme-color"/>
+  <title>
+   1 San Pedro 2
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.18, end: 7.13 },
+    { label: "1b", start: 7.38, end: 9.25 },
+    { label: "1c", start: 9.5, end: 12.17 },
+    { label: "1d", start: 12.42, end: 16.07 },
+    { label: "2a", start: 16.32, end: 23.63 },
+    { label: "2b", start: 23.88, end: 32.79 },
+    { label: "3", start: 33.04, end: 37.35 },
+    { label: "4a", start: 37.6, end: 40.87 },
+    { label: "4b", start: 41.12, end: 43.95 },
+    { label: "4c", start: 44.2, end: 46.11 },
+    { label: "4d", start: 46.36, end: 50.79 },
+    { label: "5a", start: 51.04, end: 53.47 },
+    { label: "5b", start: 53.72, end: 59.03 },
+    { label: "5c", start: 59.28, end: 63.95 },
+    { label: "5d", start: 64.2, end: 70.17 },
+    { label: "6a", start: 70.42, end: 73.49 },
+    { label: "6b", start: 73.74, end: 77.31 },
+    { label: "6c", start: 77.56, end: 81.91 },
+    { label: "6d", start: 82.16, end: 85.75 },
+    { label: "6e", start: 86, end: 89.51 },
+    { label: "7a", start: 89.76, end: 91.59 },
+    { label: "7b", start: 91.84, end: 93.79 },
+    { label: "7c", start: 94.04, end: 96.43 },
+    { label: "7d", start: 96.68, end: 99.63 },
+    { label: "7e", start: 99.88, end: 103.79 },
+    { label: "7f", start: 104.04, end: 111.27 },
+    { label: "8a", start: 111.52, end: 112.83 },
+    { label: "8b", start: 113.08, end: 119.11 },
+    { label: "8c", start: 119.36, end: 123.67 },
+    { label: "8d", start: 123.92, end: 125.79 },
+    { label: "9a", start: 126.04, end: 129.59 },
+    { label: "9b", start: 129.84, end: 132.95 },
+    { label: "9c", start: 133.2, end: 136.23 },
+    { label: "9d", start: 136.48, end: 142.09 },
+    { label: "9e", start: 142.34, end: 149.23 },
+    { label: "10a", start: 149.48, end: 152.69 },
+    { label: "10b", start: 152.94, end: 156.43 },
+    { label: "10c", start: 156.68, end: 159.13 },
+    { label: "10d", start: 159.38, end: 161.91 },
+    { label: "11a", start: 162.16, end: 164.31 },
+    { label: "11b", start: 164.56, end: 169.27 },
+    { label: "11c", start: 169.52, end: 174.31 },
+    { label: "11d", start: 174.56, end: 179.63 },
+    { label: "12a", start: 179.88, end: 183.31 },
+    { label: "12b", start: 183.56, end: 184.77 },
+    { label: "12c", start: 185.02, end: 188.31 },
+    { label: "12d", start: 188.56, end: 196.03 },
+    { label: "13a", start: 196.28, end: 197.55 },
+    { label: "13b", start: 197.8, end: 201.27 },
+    { label: "13c", start: 201.52, end: 204.53 },
+    { label: "14", start: 204.78, end: 214.79 },
+    { label: "15", start: 215.04, end: 224.27 },
+    { label: "16a", start: 224.52, end: 229.79 },
+    { label: "16b", start: 230.04, end: 232.67 },
+    { label: "16c", start: 232.92, end: 235.77 },
+    { label: "16d", start: 236.02, end: 240.35 },
+    { label: "17a", start: 240.6, end: 242.41 },
+    { label: "17b", start: 242.66, end: 244.31 },
+    { label: "17c", start: 244.56, end: 248.87 },
+    { label: "18a", start: 249.12, end: 251.17 },
+    { label: "18b", start: 251.42, end: 254.07 },
+    { label: "18c", start: 254.32, end: 258.71 },
+    { label: "19", start: 258.96, end: 266.59 },
+    { label: "20a", start: 266.84, end: 270.35 },
+    { label: "20b", start: 270.6, end: 273.47 },
+    { label: "20c", start: 273.72, end: 278.37 },
+    { label: "20d", start: 278.62, end: 280.01 },
+    { label: "21a", start: 280.26, end: 282.67 },
+    { label: "21b", start: 282.92, end: 286.19 },
+    { label: "21c", start: 286.44, end: 288.99 },
+    { label: "22", start: 289.24, end: 294.87 },
+    { label: "23a", start: 295.12, end: 296.95 },
+    { label: "23b", start: 297.2, end: 301.03 },
+    { label: "23c", start: 301.28, end: 307.55 },
+    { label: "24a", start: 307.8, end: 310.39 },
+    { label: "24b", start: 310.64, end: 313.47 },
+    { label: "24c", start: 313.72, end: 316.87 },
+    { label: "24d", start: 317.12, end: 319.63 },
+    { label: "24e", start: 319.88, end: 321.71 },
+    { label: "25a", start: 321.96, end: 326.63 },
+    { label: "25b", start: 326.88, end: 333.41 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">2:6 </span><span class=\"ft\">O “Sion” yej ito̱ka̱ꞌ tepe̱ꞌ ka̱n mochij a̱ltepe̱ꞌ Jerusalén.</span></div>",
+    "F-1": "<div class=\"footnote-p\"><span class=\"fr\">2:11 </span><span class=\"ft\">Anka kijto̱jneki iga yej kitoka Cristo imelaꞌcha̱n ipan cielo.</span></div>",
+    "F-2": "<div class=\"footnote-p\"><span class=\"fr\">2:13 </span><span class=\"ft\">Xikita glosario “César”.</span></div>",
+    "F-3": "<div class=\"footnote-p\"><span class=\"fr\">2:16 </span><span class=\"ft\">Xikita glosario “Esclavo”.</span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 5 }];
+var hasIntro = false;
+var baseRef  = "nhxT-25-1PE-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nhxT-24-JAS-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-25-1PE-001.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      1 San Pedro
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      2
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-25-1PE-003.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nhxT-26-2PE-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     2
+    </div>
+    <div class="txs" id="T1a">
+     Xikajte̱wáka̱nya iga ankichi̱waj nochi yej ajaye̱kti,
+    </div>
+    <div class="txs" id="T1b">
+     ayoꞌ xitakajkaya̱waka̱n,
+    </div>
+    <div class="txs" id="T1c">
+     amo san ximopajpanti̱ka̱n iga anye̱ꞌnemij,
+    </div>
+    <div class="txs" id="T1d">
+     amo xita‑i̱xitaka̱n iwá̱n amo xitapo̱powaka̱n.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Xijyaka̱n ken seliꞌko̱kone̱ꞌ yej a̱tanekij iga kinektokej chi̱chiwala̱ꞌ,
+    </div>
+    <div class="txs" id="T2b">
+     iwá̱n ino̱nwaꞌ chi̱chiwala̱ꞌ kijto̱jneki itájto̱l Dios yej pox ye̱kti iwá̱n te̱pale̱wiá iga wel má̱j matimoconfia̱ro̱ka̱n ipan yéj iwá̱n wel te̱salva̱rowa.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Amejwa̱n ankimátija iga toTe̱ko poxsan te̱cho̱kiliá.
+    </div>
+    <span id="bookmarks3">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s1">
+     Cristo, teꞌti yej isatoꞌ
+    </div>
+   </div>
+   <span id="bookmarks3">
+   </span>
+   <a id="v4">
+   </a>
+   <div class="p">
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Inó̱n iga xikna̱ꞌtecho̱ka̱n toTe̱ko Jesucristo,
+    </div>
+    <div class="txs" id="T4b">
+     yéjwaꞌ ken tikita se̱ teꞌti yej isatoꞌ,
+    </div>
+    <div class="txs" id="T4c">
+     yej la gente kitajkalkej,
+    </div>
+    <div class="txs" id="T4d">
+     eꞌ inó̱n teꞌti Dios kitapejpen iwá̱n poxsan vale̱rowa.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Amejwa̱n no̱ ken antemej yej isatokej,
+    </div>
+    <div class="txs" id="T5b">
+     iwá̱n iga ino̱mej teꞌti Dios nemi kichi̱wa tio̱pan ka̱n onos iyEspí̱ritoj,
+    </div>
+    <div class="txs" id="T5c">
+     iwá̱n amejwa̱n ansacerdo̱tejmej yej ankichi̱waj ken kineki Dios,
+    </div>
+    <div class="txs" id="T5d">
+     iwá̱n Jesucristo mitzpale̱wiáj iga ankimakaj iyofre̱ndaj Dios yej poxsan kiye̱ꞌita.
+    </div>
+    <span id="bookmarks5">
+    </span>
+    <a id="v6">
+    </a>
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     No̱ ijkí̱n ijkuilijtoꞌ itájto̱l Dios:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T6b">
+     Nej nikta̱liá se̱ teꞌti ipan Jerusalén,
+     <span class="footnote selectable" id="F-0">
+      <sup>
+       a
+      </sup>
+     </span>
+    </div>
+    <div class="txs" id="T6c">
+     inó̱n teꞌti ka̱n pe̱wa iga mochi̱wa kajli,
+    </div>
+    <div class="txs" id="T6d">
+     iwá̱n inó̱n teꞌti Dios kitapejpen iga poxsan vale̱rowa,
+    </div>
+   </div>
+   <div class="q">
+    <div class="txs" id="T6e">
+     yej ípan moconfia̱rowa ayá̱ꞌ mopi̱najti̱j.
+    </div>
+    <span id="bookmarks6">
+    </span>
+   </div>
+   <span id="bookmarks6">
+   </span>
+   <a id="v7">
+   </a>
+   <div class="m">
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Iga amejwa̱n yej ankicre̱dowaj,
+    </div>
+    <div class="txs" id="T7b">
+     inó̱n teꞌti poxsan vale̱rowa,
+    </div>
+    <div class="txs" id="T7c">
+     eꞌ iga ino̱mej yej ayá̱ꞌ kicre̱dowaj,
+    </div>
+    <div class="txs" id="T7d">
+     mocumpli̱rowa ka̱n ijkuilijtoꞌ pan itájto̱l Dios:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T7e">
+     Yej kalchi̱waj kitajkalkej inó̱n teꞌti,
+    </div>
+   </div>
+   <div class="q">
+    <div class="txs" id="T7f">
+     eꞌ inó̱n teꞌti ma̱jya sej vale̱rowa iga kitapejpenkej iga ípan mataksato kajli yej nemi mochi̱wa.
+    </div>
+    <span id="bookmarks7">
+    </span>
+   </div>
+   <span id="bookmarks7">
+   </span>
+   <a id="v8">
+   </a>
+   <div class="m">
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     No̱ mochij yej ijkí̱n ijkuilijtoꞌ:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T8b">
+     Teꞌti ka̱n mokxiwi̱tekilo iwá̱n teꞌti yej tawetzi̱ltiá.
+    </div>
+   </div>
+   <div class="m">
+    <div class="txs" id="T8c">
+     Yejamej mokxiwi̱tekij iga ayá̱ꞌ kicre̱dowaj itájto̱l Jesucristo,
+    </div>
+    <div class="txs" id="T8d">
+     ino̱mej ino̱nya nokta iga wa̱lkej.
+    </div>
+    <span id="bookmarks8">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Amejwa̱n itatki Dios
+    </div>
+   </div>
+   <span id="bookmarks8">
+   </span>
+   <a id="v9">
+   </a>
+   <div class="p">
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     Eꞌ amejwa̱n gente yej Dios mitztapejpenkej,
+    </div>
+    <div class="txs" id="T9b">
+     ansacerdo̱tejmej yej antekipanowaj iga yéj.
+    </div>
+    <div class="txs" id="T9c">
+     Amejwa̱n gente yej anye̱ꞌnemij iyi̱xtaj,
+    </div>
+    <div class="txs" id="T9d">
+     iwá̱n mitzno̱tzkej iga xikpowaka̱n yej Dios kichij yej ayagaj má̱j wel kichi̱wa.
+    </div>
+    <div class="txs" id="T9e">
+     Dios mitzki̱xtijkej ka̱n ankichijtoyaj yej aye̱kti iga iná̱n xikchi̱waka̱n yej ye̱kti ken yéj kineki.
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Ikya amejwa̱n ayéj te̱ amoteki iyi̱xtaj Dios,
+    </div>
+    <div class="txs" id="T10b">
+     eꞌ iná̱n amejwa̱n gente yej itátkiya Dios.
+    </div>
+    <div class="txs" id="T10c">
+     Ikya ayagaj mitzcho̱kilia̱yaj,
+    </div>
+    <div class="txs" id="T10d">
+     eꞌ iná̱n mitzcho̱kiliaja Dios.
+    </div>
+    <span id="bookmarks10">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s3">
+     Xinemika̱n ken Dios kineki
+    </div>
+   </div>
+   <span id="bookmarks10">
+   </span>
+   <a id="v11">
+   </a>
+   <div class="p">
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Nokni̱wa̱n yej nimitzpoxnekij,
+    </div>
+    <div class="txs" id="T11b">
+     yej ken anwejkacha̱nejkej iwá̱n yej ken ampanówajsan pan iní̱n ta̱jli,
+     <span class="footnote selectable" id="F-1">
+      <sup>
+       b
+      </sup>
+     </span>
+    </div>
+    <div class="txs" id="T11c">
+     nimitztajtaniliáj iga amo xikchi̱waka̱n yej aye̱kti yej mitzyo̱ltila̱naj,
+    </div>
+    <div class="txs" id="T11d">
+     wa̱n amo xikchi̱waka̱n yej ayá̱ꞌ mitzpale̱wiáj iga ankitokaj iyojwi toTe̱ko.
+    </div>
+    <span id="bookmarks11">
+    </span>
+    <a id="v12">
+    </a>
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Xiye̱ꞌnemika̱n iyi̱xtaj yej ayá̱ꞌ kicre̱dowaj Dios.
+    </div>
+    <div class="txs" id="T12b">
+     Ijkó̱n yejamej,
+    </div>
+    <div class="txs" id="T12c">
+     malej iga amejwa̱n mitzijliáj iga ankichi̱waj yej aye̱kti,
+    </div>
+    <div class="txs" id="T12d">
+     yejame̱n kitaskej iga ankichi̱waj yej ye̱kti iwá̱n kiweyimati̱lti̱skej Dios kua̱ꞌ yéj wi̱ꞌ tajuzga̱ro̱ki.
+    </div>
+    <span id="bookmarks12">
+    </span>
+   </div>
+   <span id="bookmarks12">
+   </span>
+   <a id="v13">
+   </a>
+   <div class="p">
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Iga ankitokaj toTe̱ko,
+    </div>
+    <div class="txs" id="T13b">
+     xiktajto̱lkakika̱n yej manda̱rowaj ipan iní̱n ta̱jli:
+    </div>
+    <div class="txs" id="T13c">
+     ken el rey César
+     <span class="footnote selectable" id="F-2">
+      <sup>
+       c
+      </sup>
+     </span>
+     iga yéj má̱j manda̱rowa,
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     iwá̱n gobernado̱rmej iga kiti̱tani el rey iga makicastiga̱ro̱ka̱n yej kichi̱waj yej aye̱kti iwá̱n maye̱ꞌtajto̱ka̱n iga yej kichijtokej yej ye̱kti.
+    </div>
+    <span id="bookmarks14">
+    </span>
+    <a id="v15">
+    </a>
+    <div class="txs" id="T15">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     Porque Dios kineki iga amejamej xikchi̱waka̱n yej ye̱kti iga ayꞌya mamitzpo̱powaka̱n ino̱mej yej xejxe̱toꞌnemij yej aki̱xmatij itájto̱l toTe̱ko.
+    </div>
+    <span id="bookmarks15">
+    </span>
+   </div>
+   <span id="bookmarks15">
+   </span>
+   <a id="v16">
+   </a>
+   <div class="p">
+    <div class="txs" id="T16a">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Xinemika̱n ken yej wel ankichi̱waj ken ankinekij iga ayagaj mitzpiáj ken esclavo,
+     <span class="footnote selectable" id="F-3">
+      <sup>
+       d
+      </sup>
+     </span>
+    </div>
+    <div class="txs" id="T16b">
+     eꞌ malej iga wel ankichi̱waj ken ankinekij,
+    </div>
+    <div class="txs" id="T16c">
+     amo iga ino̱nya xikchi̱waka̱n yej aye̱kti.
+    </div>
+    <div class="txs" id="T16d">
+     Xinemika̱n ken iyescla̱vojmej Dios iga ankichi̱waj ken yéj kineki.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Xitarrespeta̱ro̱ka̱n,
+    </div>
+    <div class="txs" id="T17b">
+     xiknekika̱n tokni̱wa̱n,
+    </div>
+    <div class="txs" id="T17c">
+     xikmajmawili̱ka̱n Dios iwá̱n xik‑respeta̱ro̱ka̱n rey César.
+    </div>
+    <span id="bookmarks17">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s4">
+     Matimi̱xkui̱ti̱ka̱n pan Cristo ken iga kisufri̱roj
+    </div>
+   </div>
+   <span id="bookmarks17">
+   </span>
+   <a id="v18">
+   </a>
+   <div class="p">
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Amejwa̱n yej an‑escla̱vojmej,
+    </div>
+    <div class="txs" id="T18b">
+     xikchi̱waka̱n ken mitztekimakaj amote̱komej.
+    </div>
+    <div class="txs" id="T18c">
+     Siga te‑ijikni̱mej o malej ayá̱ꞌ o siga mitzikno̱chi̱waj.
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Dios mitzye̱ꞌitaj siga ankijyo̱wiáj malej iga amote̱komej mitzyokacastiga̱rowaj iga ankichi̱waj ken Dios kineki.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Eꞌ siga mitzikno̱chi̱waj iga ankichi̱waj yej aye̱kti,
+    </div>
+    <div class="txs" id="T20b">
+     ayꞌya agaj wel kijtowa iga mitzyoka‑ikno̱chi̱waj;
+    </div>
+    <div class="txs" id="T20c">
+     eꞌ siga ankichi̱waj yej ye̱kti iwá̱n mitzikno̱chi̱waj iwá̱n ankijyo̱wiáj,
+    </div>
+    <div class="txs" id="T20d">
+     Dios kiye̱ꞌita.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Iga inó̱n nokta mitztapejpenkej Dios;
+    </div>
+    <div class="txs" id="T21b">
+     iga Cristo no̱ kikno̱chijkej iga totechko,
+    </div>
+    <div class="txs" id="T21c">
+     inó̱n iga matikchi̱waka̱n ken yéj kichij.
+    </div>
+    <span id="bookmarks21">
+    </span>
+    <a id="v22">
+    </a>
+    <div class="txs" id="T22">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Cristo ayí̱ꞌ kichij yej aye̱kti iwá̱n ayí̱ꞌ takajkayaj.
+    </div>
+    <span id="bookmarks22">
+    </span>
+    <a id="v23">
+    </a>
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     Kua̱ꞌ kuajkuantas yej ajaye̱kti kijlia̱yaj,
+    </div>
+    <div class="txs" id="T23b">
+     Cristo ayá̱ꞌ tate̱nkuepilia̱ya iwá̱n kua̱ꞌ kimagakej,
+    </div>
+    <div class="txs" id="T23c">
+     yéj ayá̱ꞌ moma̱kuepaꞌ sino que kisenta̱lia̱ya iya̱lmaj pan Dios yej taye̱ꞌjuzga̱rowa.
+    </div>
+    <span id="bookmarks23">
+    </span>
+    <a id="v24">
+    </a>
+    <div class="txs" id="T24a">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Cristo miguiꞌ ipan cruz iga totechko,
+    </div>
+    <div class="txs" id="T24b">
+     iga iná̱n tejamej matikajte̱waka̱n iga tikchijtokej yej aye̱kti,
+    </div>
+    <div class="txs" id="T24c">
+     iwá̱n welja matiye̱ꞌnemika̱n.
+    </div>
+    <div class="txs" id="T24d">
+     Cristo kimagakej este pox eski̱saꞌ,
+    </div>
+    <div class="txs" id="T24e">
+     iga amejwa̱n xi‑achitiaka̱n.
+    </div>
+    <span id="bookmarks24">
+    </span>
+    <a id="v25">
+    </a>
+    <div class="txs" id="T25a">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Porque ikya amejwa̱n ken tikita anborre̱gojmej yej pojpolijtinemiáj,
+    </div>
+    <div class="txs" id="T25b">
+     eꞌ iná̱n ayoꞌ ampojpolijtinemij iga ankitókaja Cristo yej nochipa mitzcuida̱rowaj.
+    </div>
+    <span id="bookmarks25">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2016,
+      <a class="web-link" href="http://www.Wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2015,
+      <a class="web-link" href="https://live.bible.is/bible/NHXNHX/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;ISO_ROD_index=119">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de Tatahuicapan.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="http://cloud.faithcomesbyhearing.com/mp3audiobibles2/NHXNTVN2DA/B21___02_1San_Pedro__NHXNTVN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#083F0E" name="theme-color"/>
+  <title>
+   Hechos 14
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0.3, end: 9.15 },
+    { label: "1b", start: 9.4, end: 14.85 },
+    { label: "2a", start: 15.1, end: 17.35 },
+    { label: "2b", start: 17.6, end: 22.87 },
+    { label: "3a", start: 23.12, end: 23.99 },
+    { label: "3b", start: 24.24, end: 27.27 },
+    { label: "3c", start: 27.52, end: 32.23 },
+    { label: "3d", start: 32.48, end: 36.83 },
+    { label: "3e", start: 37.08, end: 44.29 },
+    { label: "4a", start: 44.54, end: 47.55 },
+    { label: "4b", start: 47.8, end: 52.71 },
+    { label: "5a", start: 52.96, end: 54.11 },
+    { label: "5b", start: 54.36, end: 56.79 },
+    { label: "5c", start: 57.04, end: 63.43 },
+    { label: "6a", start: 63.68, end: 65.71 },
+    { label: "6b", start: 65.96, end: 67.03 },
+    { label: "6c", start: 67.28, end: 73.29 },
+    { label: "6d", start: 73.54, end: 76.79 },
+    { label: "7", start: 77.04, end: 80.79 },
+    { label: "8a", start: 81.04, end: 86.03 },
+    { label: "8b", start: 86.28, end: 88.03 },
+    { label: "8c", start: 88.28, end: 90.11 },
+    { label: "9a", start: 90.36, end: 92.39 },
+    { label: "9b", start: 92.64, end: 99.51 },
+    { label: "10a", start: 99.76, end: 101.71 },
+    { label: "10b", start: 101.96, end: 102.59 },
+    { label: "10c", start: 102.84, end: 106.35 },
+    { label: "11a", start: 106.6, end: 109.87 },
+    { label: "11b", start: 110.12, end: 114.87 },
+    { label: "11c", start: 115.12, end: 115.87 },
+    { label: "11d", start: 116.12, end: 120.19 },
+    { label: "12a", start: 120.44, end: 122.55 },
+    { label: "12b", start: 122.8, end: 126.43 },
+    { label: "12c", start: 126.68, end: 128.71 },
+    { label: "13a", start: 128.96, end: 130.71 },
+    { label: "13b", start: 130.96, end: 133.95 },
+    { label: "13c", start: 134.2, end: 136.75 },
+    { label: "13d", start: 137, end: 139.79 },
+    { label: "13e", start: 140.04, end: 149.83 },
+    { label: "14a", start: 150.08, end: 154.59 },
+    { label: "14b", start: 154.84, end: 158.43 },
+    { label: "14c", start: 158.68, end: 159.89 },
+    { label: "15a", start: 160.14, end: 161.23 },
+    { label: "15b", start: 161.48, end: 162.89 },
+    { label: "15c", start: 163.14, end: 165.51 },
+    { label: "15d", start: 165.76, end: 173.31 },
+    { label: "15e", start: 173.56, end: 174.95 },
+    { label: "15f", start: 175.2, end: 176.21 },
+    { label: "15g", start: 176.46, end: 179.71 },
+    { label: "16", start: 179.96, end: 184.59 },
+    { label: "17a", start: 184.84, end: 185.49 },
+    { label: "17b", start: 185.74, end: 187.75 },
+    { label: "17c", start: 188, end: 190.45 },
+    { label: "17d", start: 190.7, end: 192.95 },
+    { label: "17e", start: 193.2, end: 197.59 },
+    { label: "18a", start: 197.84, end: 200.63 },
+    { label: "18b", start: 200.88, end: 203.31 },
+    { label: "18c", start: 203.56, end: 207.81 },
+    { label: "19a", start: 208.06, end: 212.77 },
+    { label: "19b", start: 213.02, end: 218.07 },
+    { label: "19c", start: 218.32, end: 220.15 },
+    { label: "19d", start: 220.4, end: 225.41 },
+    { label: "20a", start: 225.66, end: 228.23 },
+    { label: "20b", start: 228.48, end: 231.53 },
+    { label: "20c", start: 231.78, end: 237.27 },
+    { label: "21a", start: 237.52, end: 245.69 },
+    { label: "21b", start: 245.94, end: 248.61 },
+    { label: "21c", start: 248.86, end: 250.89 },
+    { label: "22a", start: 251.14, end: 254.99 },
+    { label: "22b", start: 255.24, end: 258.23 },
+    { label: "22c", start: 258.48, end: 264.17 },
+    { label: "23a", start: 264.42, end: 270.57 },
+    { label: "23b", start: 270.82, end: 273.61 },
+    { label: "23c", start: 273.86, end: 276.63 },
+    { label: "23d", start: 276.88, end: 278.51 },
+    { label: "24", start: 278.76, end: 285.93 },
+    { label: "25", start: 286.18, end: 292.69 },
+    { label: "26a", start: 292.94, end: 297.75 },
+    { label: "26b", start: 298, end: 305.87 },
+    { label: "27a", start: 306.12, end: 308.25 },
+    { label: "27b", start: 308.5, end: 313.13 },
+    { label: "27c", start: 313.38, end: 319.45 },
+    { label: "28", start: 319.7, end: 325.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "nsu-44-ACT-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nsu-43-JHN-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-44-ACT-013.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      Hechos
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      14
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-44-ACT-015.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nsu-45-ROM-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Pablo ivan Bernabé oajsitoh Iconio
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     14
+    </div>
+    <div class="txs" id="T1a">
+     Kan siudad de Iconio Pablo ivan Bernabé okalakeh san sekka kan intiotlamachtijkal in judiojtih,
+    </div>
+    <div class="txs" id="T1b">
+     sa tlawel kuali otlapojkeh ke miekeh judiojtih iva tlen amo judiojtih otlaneltokakeh.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Pero in judiojtih tlen amo otlaneltokakeh,
+    </div>
+    <div class="txs" id="T2b">
+     okintlatlalvijkeh tlen amo judiojtih para ma kiyejyekokah tlen amo kuali en kontra de toknivah.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Por eso,
+    </div>
+    <div class="txs" id="T3b">
+     Pablo ivan Bernabé omokajkeh ompa miek tonali.
+    </div>
+    <div class="txs" id="T3c">
+     Otetlapovijkeh ika yolchikavalistli porke omotenmachiayah inavak toTeko.
+    </div>
+    <div class="txs" id="T3d">
+     Ye okinmakaya velitilistli para ma kinchivakah neskayomeh iva nexkuitiltih,
+    </div>
+    <div class="txs" id="T3e">
+     iva ijkó toTeko okinmititi in gentejtih ke in tlajtoli tlen okinmilviayah de iiknomachilis yi neli melajka.
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     In gentejtih tlen de Iconio omoxexelojkeh:
+    </div>
+    <div class="txs" id="T4b">
+     sekimeh okatkah de akuerdo ivan judiojtih iva sekimeh ivan tiotlatitlaniltih.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Satepa,
+    </div>
+    <div class="txs" id="T5b">
+     sekimeh judiojtih iva tlen amo judiojtih,
+    </div>
+    <div class="txs" id="T5c">
+     iva intekivajkavah omotlatlalvijkeh para fiero kintoktiskeh in tiotlatitlaniltih iva para kinmakaskeh ika tetl.
+    </div>
+    <span id="bookmarks5">
+    </span>
+    <a id="v6">
+    </a>
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Pero Pablo ivan Bernabé,
+    </div>
+    <div class="txs" id="T6b">
+     ijkuak okimatkeh,
+    </div>
+    <div class="txs" id="T6c">
+     ocholojkeh iva oyajkeh kan siudad de Listra iva kan siudad de Derbe tlen kateh itech tlali de Licaonia,
+    </div>
+    <div class="txs" id="T6d">
+     iva itech oksekimeh altepemeh tlen ik ompa kateh.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Iva ik ompa noijki okitematiltijkeh in yankuik kuali tlajtoli.
+    </div>
+    <span id="bookmarks7">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Pablo okimakakeh ika tetl kan siudad de Listra
+    </div>
+   </div>
+   <span id="bookmarks7">
+   </span>
+   <a id="v8">
+   </a>
+   <div class="p">
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Kan siudad de Listra okatka se tlakatl tlen amo ovelia onejnemia.
+    </div>
+    <div class="txs" id="T8b">
+     Okatka koxo desde oneski.
+    </div>
+    <div class="txs" id="T8c">
+     Yejón tlakatl ompa oyetoka
+    </div>
+    <span id="bookmarks8">
+    </span>
+    <a id="v9">
+    </a>
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     okikaktoka tlen Pablo okijtovaya.
+    </div>
+    <div class="txs" id="T9b">
+     Pablo okiyekittak iva okimomakak kuenta ke yejón koxo okipiaya tlaneltokalistli para velis pajtis.
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó Pablo okilvi chikavak:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T10b">
+     —¡Ximoyekketza!
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T10c">
+     In tlakatl omoketevak iva ope nejnemi.
+    </div>
+    <span id="bookmarks10">
+    </span>
+    <a id="v11">
+    </a>
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak okittakeh tlen okichi in Pablo,
+    </div>
+    <div class="txs" id="T11b">
+     in gentejtih de Licaonia ope tzajtzih chikavak ika de yejvah intlajtol,
+    </div>
+    <div class="txs" id="T11c">
+     okijtojkeh:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T11d">
+     —¡In diosmeh ovaltemokeh kemi oyeskia tlaltikpaktlakah!
+    </div>
+    <span id="bookmarks11">
+    </span>
+   </div>
+   <span id="bookmarks11">
+   </span>
+   <a id="v12">
+   </a>
+   <div class="p">
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Bernabé okitokayotijkeh dios Júpiter,
+    </div>
+    <div class="txs" id="T12b">
+     ivan Pablo okitokayotijkeh dios Mercurio,
+    </div>
+    <div class="txs" id="T12c">
+     porke yen otlapovaya.
+    </div>
+    <span id="bookmarks12">
+    </span>
+    <a id="v13">
+    </a>
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     In tiopixki de dios Júpiter,
+    </div>
+    <div class="txs" id="T13b">
+     tlen okipiaya itiopa sa tlatentli de kan siudad,
+    </div>
+    <div class="txs" id="T13c">
+     okinvalikak torojtih iva xochikoskameh,
+    </div>
+    <div class="txs" id="T13d">
+     okinmajxitiko kan kaltentli de kan siudad.
+    </div>
+    <div class="txs" id="T13e">
+     In tiopixki iva nochtin gentejtih okinekiah kinmavistiliskeh in Pablo ivan Bernabé iva okinekiah kinmiktiliskeh torojtih para kinmakaskeh kemi se tlamanali.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Pero ijkuak in Pablo ivan Bernabé okimomakakeh kuenta tlen okinekiah kichivaskeh,
+    </div>
+    <div class="txs" id="T14b">
+     omotzotzoltzomonijkeh iva okalakeh intzala in gentejtih,
+    </div>
+    <div class="txs" id="T14c">
+     tzajtzitivih chikavak:
+    </div>
+    <span id="bookmarks14">
+    </span>
+   </div>
+   <span id="bookmarks14">
+   </span>
+   <a id="v15">
+   </a>
+   <div class="p">
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     —¡Tatanmeh!
+    </div>
+    <div class="txs" id="T15b">
+     ¿Tleka ijkó inkichivah?
+    </div>
+    <div class="txs" id="T15c">
+     Tejvah noijki titlaltikpaktlakah kemi imejvah.
+    </div>
+    <div class="txs" id="T15d">
+     Tejvah otivalajkeh otimechilvikoh ke moneki inkikavaskeh tlen amitla ipati iva ximokuapakah inavak toYejwatzi Dios tlen yolitok.
+    </div>
+    <div class="txs" id="T15e">
+     Ye okichi in ilvikak,
+    </div>
+    <div class="txs" id="T15f">
+     in tlaltikpaktli,
+    </div>
+    <div class="txs" id="T15g">
+     in atl iva nochi tlen intech onka.
+    </div>
+    <span id="bookmarks15">
+    </span>
+    <a id="v16">
+    </a>
+    <div class="txs" id="T16">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Yi wejkavitl in toYejwatzi okinkavili in gentejtih ma kichivakah san tlen yejvah okinekiah.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Pero,
+    </div>
+    <div class="txs" id="T17b">
+     Ye nochipa okinmititiaya akin Ye,
+    </div>
+    <div class="txs" id="T17c">
+     ika tlen kuali tlen okichivaya por yejvah.
+    </div>
+    <div class="txs" id="T17d">
+     Ye kichiva ma kiavi iva ma tlatlaki,
+    </div>
+    <div class="txs" id="T17e">
+     para ijkó nochtin ma kipiakah tlán kikuaskeh iva ma yekah ika pakilistli.
+    </div>
+    <span id="bookmarks17">
+    </span>
+   </div>
+   <span id="bookmarks17">
+   </span>
+   <a id="v18">
+   </a>
+   <div class="p">
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Pablo ivan Bernabé ijkó okijtojkeh,
+    </div>
+    <div class="txs" id="T18b">
+     pero ovi para okintlakavaltijkeh in gentejtih,
+    </div>
+    <div class="txs" id="T18c">
+     para amo ma kinmiktilikah in torojtih para kinmakaskeh kemi tlamanali.
+    </div>
+    <span id="bookmarks18">
+    </span>
+   </div>
+   <span id="bookmarks18">
+   </span>
+   <a id="v19">
+   </a>
+   <div class="p">
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuakó oajsikoh sekimeh judiojtih de Antioquía iva de Iconio,
+    </div>
+    <div class="txs" id="T19b">
+     iva okintlatlalvijkeh in gentejtih de Listra iva okimagakeh in Pablo ika tetl.
+    </div>
+    <div class="txs" id="T19c">
+     Yejvah okiyejyekojkeh yokimiktijkeh,
+    </div>
+    <div class="txs" id="T19d">
+     iva okitilantiajkeh ipan tlali okikixtijkeh asta tlatentli de kan siudad.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Pero in tlaneltokakeh okiyavalojkeh in Pablo,
+    </div>
+    <div class="txs" id="T20b">
+     ye omoketzki iva okalakki oksejpa kan siudad.
+    </div>
+    <div class="txs" id="T20c">
+     Omostlatik Pablo ivan Bernabé okiskeh de ompa iva oyajkeh para Derbe.
+    </div>
+    <span id="bookmarks20">
+    </span>
+   </div>
+   <span id="bookmarks20">
+   </span>
+   <a id="v21">
+   </a>
+   <div class="p">
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Ompa kan siudad de Derbe okitematiltijkeh in yankuik kuali tlajtoli iva miekeh ope kitokah iojviv in Jesús.
+    </div>
+    <div class="txs" id="T21b">
+     Satepa omokuapkeh oksejpa para Listra,
+    </div>
+    <div class="txs" id="T21c">
+     Iconio iva Antioquía.
+    </div>
+    <span id="bookmarks21">
+    </span>
+    <a id="v22">
+    </a>
+    <div class="txs" id="T22a">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Itech yejonmeh siudades okinyolchikajkeh in tlaneltokakeh,
+    </div>
+    <div class="txs" id="T22b">
+     okinmilvijkeh ma moyekketokah itech intlaneltokalis.
+    </div>
+    <div class="txs" id="T22c">
+     Noijki okinmilvijkeh ke para se kalakis kan Dios tlanavatia kipia tlen se tlajyovis miek.
+    </div>
+    <span id="bookmarks22">
+    </span>
+    <a id="v23">
+    </a>
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     Pablo ivan Bernabé okintlalijkeh sekimeh tlayakankeh itech kada lugar kan omololovayah in tlaneltokakeh.
+    </div>
+    <div class="txs" id="T23b">
+     Satepa de omodiostzajtzilijkeh iva omosavkeh,
+    </div>
+    <div class="txs" id="T23c">
+     okintlalijkeh ipan imatzin toTeko,
+    </div>
+    <div class="txs" id="T23d">
+     tlen inavak otlaneltokakeh.
+    </div>
+    <span id="bookmarks23">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s3">
+     Pablo ivan Bernabé omokuapkeh para Antioquía de Siria
+    </div>
+   </div>
+   <span id="bookmarks23">
+   </span>
+   <a id="v24">
+   </a>
+   <div class="p">
+    <div class="txs" id="T24">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Satepa Pablo ivan Bernabé opanokeh ik región de Pisidia iva oajsitoh kan región de Panfilia.
+    </div>
+    <span id="bookmarks24">
+    </span>
+    <a id="v25">
+    </a>
+    <div class="txs" id="T25">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Otetlapovijkeh de itlajtol in Dios kan siudad de Perge iva para ompa oyajkeh kan siudad de Atalia.
+    </div>
+    <span id="bookmarks25">
+    </span>
+    <a id="v26">
+    </a>
+    <div class="txs" id="T26a">
+     <span class="v">
+      26
+     </span>
+     <span class="vsp">
+     </span>
+     Ompa Atalia otlejkokeh itech barko iva oyajkeh para Antioquía de Siria,
+    </div>
+    <div class="txs" id="T26b">
+     kan antes in tlaneltokakeh okitlatlavtijkeh in Dios ma kinpalevi in Pablo ivan Bernabé itech intekiv tlen axka yokitlamijkeh.
+    </div>
+    <span id="bookmarks26">
+    </span>
+    <a id="v27">
+    </a>
+    <div class="txs" id="T27a">
+     <span class="v">
+      27
+     </span>
+     <span class="vsp">
+     </span>
+     Ijkuak oajsitoh Antioquía,
+    </div>
+    <div class="txs" id="T27b">
+     okinmololojkeh in tlaneltokakeh iva okinmilvijkeh nochi tlen Dios okichi invah,
+    </div>
+    <div class="txs" id="T27c">
+     iva kenik in Dios yokintlapoli puerta tlen amo judiojtih para ke yejvah noijki ma kineltokakah.
+    </div>
+    <span id="bookmarks27">
+    </span>
+    <a id="v28">
+    </a>
+    <div class="txs" id="T28">
+     <span class="v">
+      28
+     </span>
+     <span class="vsp">
+     </span>
+     Pablo ivan Bernabé ompa omokajkeh miek tonali invan tlaneltokakeh.
+    </div>
+    <span id="bookmarks28">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2017,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2016,
+      <a class="web-link" href="https://live.bible.is/bible/NSUWBT/MAT/1">
+       Hosanna, Bible.is
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nsu&amp;ISO_ROD_index=124">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de la Sierra Negra.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://cloud.faithcomesbyhearing.com/mp3audiobibles2/NSUWBTN2DA/B05___14_Hechos______NSUWBTN2DA.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

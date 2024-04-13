@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#000B63" name="theme-color"/>
+  <title>
+   Hechos 13
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 5.36, end: 11.65 },
+    { label: "1b", start: 11.9, end: 14.05 },
+    { label: "1c", start: 14.3, end: 16.13 },
+    { label: "1d", start: 16.38, end: 18.31 },
+    { label: "1e", start: 18.56, end: 24.53 },
+    { label: "2a", start: 24.78, end: 25.67 },
+    { label: "2b", start: 25.92, end: 30.39 },
+    { label: "2c", start: 30.64, end: 32.43 },
+    { label: "2d", start: 32.68, end: 38.83 },
+    { label: "3a", start: 39.08, end: 42.51 },
+    { label: "3b", start: 42.76, end: 47.73 },
+    { label: "4a", start: 47.98, end: 51.75 },
+    { label: "4b", start: 52, end: 58.11 },
+    { label: "4c", start: 58.36, end: 64.13 },
+    { label: "5a", start: 64.38, end: 66.39 },
+    { label: "5b", start: 66.64, end: 69.47 },
+    { label: "5c", start: 69.72, end: 76.41 },
+    { label: "5d", start: 76.66, end: 80.21 },
+    { label: "6a", start: 80.46, end: 87.63 },
+    { label: "6b", start: 87.88, end: 92.41 },
+    { label: "6c", start: 92.66, end: 94.85 },
+    { label: "6d", start: 95.1, end: 100.53 },
+    { label: "7a", start: 100.78, end: 104.87 },
+    { label: "7b", start: 105.12, end: 109.53 },
+    { label: "7c", start: 109.78, end: 117.39 },
+    { label: "8a", start: 117.64, end: 119.75 },
+    { label: "8b", start: 120, end: 121.75 },
+    { label: "8c", start: 122, end: 122.81 },
+    { label: "8d", start: 123.06, end: 125.41 },
+    { label: "8e", start: 125.66, end: 129.31 },
+    { label: "9a", start: 129.56, end: 130.83 },
+    { label: "9b", start: 131.08, end: 132.15 },
+    { label: "9c", start: 132.4, end: 136.29 },
+    { label: "10a", start: 136.54, end: 137.63 },
+    { label: "10b", start: 137.88, end: 140.17 },
+    { label: "10c", start: 140.42, end: 144.57 },
+    { label: "10d", start: 144.82, end: 150.17 },
+    { label: "11a", start: 150.42, end: 150.99 },
+    { label: "11b", start: 151.24, end: 153.61 },
+    { label: "11c", start: 153.86, end: 158.91 },
+    { label: "11d", start: 159.16, end: 163.91 },
+    { label: "11e", start: 164.16, end: 168.97 },
+    { label: "11f", start: 169.22, end: 170.69 },
+    { label: "12a", start: 170.94, end: 174.21 },
+    { label: "12b", start: 174.46, end: 175.19 },
+    { label: "12c", start: 175.44, end: 178.13 },
+    { label: "13a", start: 178.38, end: 187.91 },
+    { label: "13b", start: 188.16, end: 192.31 },
+    { label: "14a", start: 192.56, end: 199.51 },
+    { label: "14b", start: 199.76, end: 202.45 },
+    { label: "14c", start: 202.7, end: 206.91 },
+    { label: "15a", start: 207.16, end: 213.25 },
+    { label: "15b", start: 213.5, end: 219.75 },
+    { label: "15c", start: 220, end: 230 },
+    { label: "15d", start: 220, end: 222.97 },
+    { label: "15e", start: 223.22, end: 225.11 },
+    { label: "16a", start: 225.36, end: 227.63 },
+    { label: "16b", start: 227.88, end: 231.67 },
+    { label: "16c", start: 231.92, end: 233.67 },
+    { label: "16d", start: 233.92, end: 235.31 },
+    { label: "16e", start: 235.56, end: 238.75 },
+    { label: "16f", start: 239, end: 239.93 },
+    { label: "17a", start: 240.18, end: 244.51 },
+    { label: "17b", start: 244.76, end: 249.21 },
+    { label: "17c", start: 249.46, end: 253.45 },
+    { label: "18", start: 253.7, end: 262.07 },
+    { label: "19a", start: 262.32, end: 266.99 },
+    { label: "19b", start: 267.24, end: 268.27 },
+    { label: "19c", start: 268.52, end: 272.41 },
+    { label: "20a", start: 272.66, end: 277.03 },
+    { label: "20b", start: 277.28, end: 279.67 },
+    { label: "20c", start: 279.92, end: 283.45 },
+    { label: "21a", start: 283.7, end: 288.43 },
+    { label: "21b", start: 288.68, end: 294.53 },
+    { label: "21c", start: 294.78, end: 301.81 },
+    { label: "22a", start: 302.06, end: 305.09 },
+    { label: "22b", start: 305.34, end: 307.83 },
+    { label: "22c", start: 308.08, end: 310.03 },
+    { label: "22d", start: 310.28, end: 312.07 },
+    { label: "22e", start: 312.32, end: 313.83 },
+    { label: "22f", start: 314.08, end: 319.41 },
+    { label: "23a", start: 319.66, end: 323.25 },
+    { label: "23b", start: 323.5, end: 327.19 },
+    { label: "23c", start: 327.44, end: 329.91 },
+    { label: "24a", start: 330.16, end: 332.01 },
+    { label: "24b", start: 332.26, end: 340.09 },
+    { label: "25a", start: 340.34, end: 343.19 },
+    { label: "25b", start: 343.44, end: 344.11 },
+    { label: "25c", start: 344.36, end: 346.57 },
+    { label: "25d", start: 346.82, end: 349.95 },
+    { label: "25e", start: 350.2, end: 358.39 },
+    { label: "26a", start: 358.64, end: 359.69 },
+    { label: "26b", start: 359.94, end: 362.23 },
+    { label: "26c", start: 362.48, end: 366.03 },
+    { label: "26d", start: 366.28, end: 370.51 },
+    { label: "27a", start: 370.76, end: 376.61 },
+    { label: "27b", start: 376.86, end: 384.67 },
+    { label: "27c", start: 384.92, end: 391.07 },
+    { label: "28a", start: 391.32, end: 396.31 },
+    { label: "28b", start: 396.56, end: 400.63 },
+    { label: "29a", start: 400.88, end: 407.87 },
+    { label: "29b", start: 408.12, end: 412.27 },
+    { label: "30", start: 412.52, end: 414.73 },
+    { label: "31a", start: 414.98, end: 421.11 },
+    { label: "31b", start: 421.36, end: 422.43 },
+    { label: "31c", start: 422.68, end: 426.47 },
+    { label: "32", start: 426.72, end: 433.97 },
+    { label: "33a", start: 434.22, end: 435.71 },
+    { label: "33b", start: 435.96, end: 437.53 },
+    { label: "33c", start: 437.78, end: 444.19 },
+    { label: "33d", start: 444.44, end: 449.37 },
+    { label: "33e", start: 449.62, end: 451.23 },
+    { label: "33f", start: 451.48, end: 454.15 },
+    { label: "34a", start: 454.4, end: 459.65 },
+    { label: "34b", start: 459.9, end: 463.57 },
+    { label: "34c", start: 463.82, end: 469.43 },
+    { label: "35a", start: 469.68, end: 472.21 },
+    { label: "35b", start: 472.46, end: 476.45 },
+    { label: "36a", start: 476.7, end: 477.95 },
+    { label: "36b", start: 478.2, end: 482.69 },
+    { label: "36c", start: 482.94, end: 483.63 },
+    { label: "36d", start: 483.88, end: 484.75 },
+    { label: "36e", start: 485, end: 490.91 },
+    { label: "37a", start: 491.16, end: 496.39 },
+    { label: "37b", start: 496.64, end: 498.01 },
+    { label: "38a", start: 498.26, end: 499.25 },
+    { label: "38b", start: 499.5, end: 506.19 },
+    { label: "39a", start: 506.44, end: 508.19 },
+    { label: "39b", start: 508.44, end: 510.99 },
+    { label: "39c", start: 511.24, end: 516.05 },
+    { label: "40a", start: 516.3, end: 518.51 },
+    { label: "40b", start: 518.76, end: 524.23 },
+    { label: "41a", start: 524.48, end: 525.43 },
+    { label: "41b", start: 525.68, end: 526.55 },
+    { label: "41c", start: 526.8, end: 529.11 },
+    { label: "41d", start: 529.36, end: 530.07 },
+    { label: "41e", start: 530.32, end: 531.03 },
+    { label: "41f", start: 531.28, end: 539.53 },
+    { label: "42a", start: 539.78, end: 545.35 },
+    { label: "42b", start: 545.6, end: 553.27 },
+    { label: "43a", start: 553.52, end: 558.55 },
+    { label: "43b", start: 558.8, end: 565.95 },
+    { label: "43c", start: 566.2, end: 568.43 },
+    { label: "43d", start: 568.68, end: 575.55 },
+    { label: "44", start: 575.8, end: 583.23 },
+    { label: "45a", start: 583.48, end: 587.05 },
+    { label: "45b", start: 587.3, end: 590.47 },
+    { label: "45c", start: 590.72, end: 594.77 },
+    { label: "46a", start: 595.02, end: 598.55 },
+    { label: "46b", start: 598.8, end: 600.01 },
+    { label: "46c", start: 600.26, end: 605.61 },
+    { label: "46d", start: 605.86, end: 608.83 },
+    { label: "46e", start: 609.08, end: 613.35 },
+    { label: "46f", start: 613.6, end: 617.99 },
+    { label: "47a", start: 618.24, end: 622.21 },
+    { label: "47b", start: 622.46, end: 623.65 },
+    { label: "47c", start: 623.9, end: 627.09 },
+    { label: "47d", start: 627.34, end: 632.57 },
+    { label: "48a", start: 632.82, end: 636.31 },
+    { label: "48b", start: 636.56, end: 641.87 },
+    { label: "48c", start: 642.12, end: 648.41 },
+    { label: "49", start: 648.66, end: 653.59 },
+    { label: "50a", start: 653.84, end: 664.73 },
+    { label: "50b", start: 664.98, end: 673.19 },
+    { label: "51a", start: 673.44, end: 679.17 },
+    { label: "51b", start: 679.42, end: 683.39 },
+    { label: "51c", start: 683.64, end: 685.21 },
+    { label: "51d", start: 685.46, end: 688.87 },
+    { label: "52", start: 689.12, end: 696.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "nuz-44-ACT-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="nuz-43-JHN-001.html" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-44-ACT-012.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      Hechos
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      13
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-44-ACT-014.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-00-XXF-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Bernabé ihuan Saulo quipehualtiyaj intequiyo para temachtisquej
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     13
+    </div>
+    <div class="txs" id="T1a">
+     Catcaj intzalan non tlaneltocaj ne Antioquía sequin profetas ihuan temachtijquej.
+    </div>
+    <div class="txs" id="T1b">
+     Yejhuan catcaj Bernabé,
+    </div>
+    <div class="txs" id="T1c">
+     Simón no itoca Niger,
+    </div>
+    <div class="txs" id="T1d">
+     Lucio non hualehua Cirene,
+    </div>
+    <div class="txs" id="T1e">
+     Manaén non ihuan omoscaltij Herodes non gobernador ne Galilea ihuan Saulo.
+    </div>
+    <span id="bookmarks1">
+    </span>
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Se tonal,
+    </div>
+    <div class="txs" id="T2b">
+     cuac yejhuan momachtijticatcaj itech toSeñor ihuan mosahuaticatcaj,
+    </div>
+    <div class="txs" id="T2c">
+     non Espíritu Santo oquijtoj:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T2d">
+     —Xquincalaquican Bernabé ihuan Saulo para non tequitl de nejhua yonictlapejpenij para quichihuasquej.
+    </div>
+    <span id="bookmarks2">
+    </span>
+   </div>
+   <span id="bookmarks2">
+   </span>
+   <a id="v3">
+   </a>
+   <div class="p">
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac yoquichijquej oración ihuan yomosahuaquej,
+    </div>
+    <div class="txs" id="T3b">
+     oquitlalijquej inmahuan impan yejhuan ihuan oquintitlanquej ipan inojhui.
+    </div>
+    <span id="bookmarks3">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Bernabé ihuan Saulo otemachtijquej ne Chipre
+    </div>
+   </div>
+   <span id="bookmarks3">
+   </span>
+   <a id="v4">
+   </a>
+   <div class="p">
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Non Espíritu Santo oquintitlan Bernabé ihuan Saulo,
+    </div>
+    <div class="txs" id="T4b">
+     ihuan yejhuan otemoquej ne Seleucia ihuan ompa otlejcoquej se barcoj ihuan oapanoquej,
+    </div>
+    <div class="txs" id="T4c">
+     para oyajquej ne ipan non tlalhuatzaltipan itoca Chipre oncaj inepantlaj non mar.
+    </div>
+    <span id="bookmarks4">
+    </span>
+    <a id="v5">
+    </a>
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Cuac oajsiquej ne Chipre,
+    </div>
+    <div class="txs" id="T5b">
+     ocalacquej ipan se ciudad itoca Salamina.
+    </div>
+    <div class="txs" id="T5c">
+     Ompa opejquej tetlanojnotzaj de non itlajtoltzin Dios ne intech non sinagogas de non hebreos,
+    </div>
+    <div class="txs" id="T5d">
+     ihuan Juan no itoca Marcos quimpalehuiyaya.
+    </div>
+    <span id="bookmarks5">
+    </span>
+    <a id="v6">
+    </a>
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Yejhuan oquistinenquej nohuiyan ipan non tlalhuatzaltipan hasta oajsiquej ipan non puebloj itoca Pafos.
+    </div>
+    <div class="txs" id="T6b">
+     Ompa oquinamicquej se tlacatl hebreoj itoca Barjesús.
+    </div>
+    <div class="txs" id="T6c">
+     Yejhua nahual catca.
+    </div>
+    <div class="txs" id="T6d">
+     Yejhua se tlacajcayajqui catca pampa quiteijliyaya yejhua tenojnotza de Dios.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Yejhua mohuicaya ihuan non gobernador Sergio Paulo.
+    </div>
+    <div class="txs" id="T7b">
+     Nin gobernador se tlacatl quipiyaya cajsicamatilistli.
+    </div>
+    <div class="txs" id="T7c">
+     Non gobernador otlanahuatij ma quinotzatij Bernabé ihuan Saulo pampa quinequiya quicaquis non itlajtoltzin Dios.
+    </div>
+    <span id="bookmarks7">
+    </span>
+    <a id="v8">
+    </a>
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Pero non nahual Barjesús,
+    </div>
+    <div class="txs" id="T8b">
+     no itoca catca Elimas,
+    </div>
+    <div class="txs" id="T8c">
+     nin itoca quijtosnequi nahual,
+    </div>
+    <div class="txs" id="T8d">
+     omoponeroj ca yejhuan Bernabé ihuan Saulo.
+    </div>
+    <div class="txs" id="T8e">
+     Xquicahuiliyaya non gobernador para amo tlaneltocas.
+    </div>
+    <span id="bookmarks8">
+    </span>
+    <a id="v9">
+    </a>
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon Saulo,
+    </div>
+    <div class="txs" id="T9b">
+     no itoca Pablo,
+    </div>
+    <div class="txs" id="T9c">
+     tenticatca de non Espíritu Santo oquixquechij Elimas,
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     ihuan oquilij:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T10b">
+     —¿Hueyi tlacajcayajqui ihuan moxicohuani,
+    </div>
+    <div class="txs" id="T10c">
+     diablo iconej ihuan timoponerojtinemi de mochi tlen cuali!
+    </div>
+    <div class="txs" id="T10d">
+     ¿Tlequene xticajcahua ca titepojpolojtinemi ipan non melajcaojtli de toSeñor?
+    </div>
+    <span id="bookmarks10">
+    </span>
+    <a id="v11">
+    </a>
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Aman,
+    </div>
+    <div class="txs" id="T11b">
+     toSeñor temojtij mitzcastigaros.
+    </div>
+    <div class="txs" id="T11c">
+     Tixmajmayatis ihuan ipan se tiempoj xhuelis tiquitas non tonal.
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T11d">
+     Ihuan niman ohualixmajmayatic ihuan omocaj tlayohual.
+    </div>
+    <div class="txs" id="T11e">
+     Opej tlayohualohua ihuan quitejtemohuaya aquiniyon quimatehuilanas,
+    </div>
+    <div class="txs" id="T11f">
+     pampa xoc tlachiyaya.
+    </div>
+    <span id="bookmarks11">
+    </span>
+    <a id="v12">
+    </a>
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Cuac non gobernador oquitac non tlen omochij,
+    </div>
+    <div class="txs" id="T12b">
+     otlaneltocac,
+    </div>
+    <div class="txs" id="T12c">
+     pampa cuelitaya non inemachtil toSeñor.
+    </div>
+    <span id="bookmarks12">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s3">
+     Pablo ihuan Bernabé catcaj ne Antioquía ipan iregión Pisidia
+    </div>
+   </div>
+   <span id="bookmarks12">
+   </span>
+   <a id="v13">
+   </a>
+   <div class="p">
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Pablo ihuan itehuicalhuan ocalacquej ipan barcoj ne Pafos ihuan oyajquej ne ipan non puebloj Perge ipan iregión Panfilia.
+    </div>
+    <div class="txs" id="T13b">
+     Pero Juan oquincaj ihuan omocuep para Jerusalén.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14a">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Después oquisquej Perge ihuan oyajquej ipan non ciudad itoca Antioquía ipan iregión Pisidia.
+    </div>
+    <div class="txs" id="T14b">
+     Ihuan ipan non tonal cuac mosehuiyaj,
+    </div>
+    <div class="txs" id="T14c">
+     ocalacquej ipan sinagogaj de non hebreos ihuan omotlalijquej.
+    </div>
+    <span id="bookmarks14">
+    </span>
+    <a id="v15">
+    </a>
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac yomomachtijquej non iley Moisés ihuan non intlajcuilolamahuan non profetas,
+    </div>
+    <div class="txs" id="T15b">
+     non hueyixtoquej tlayecanquej itech non synagoguej otlatitlanquej ma quimilitij Pablo ihuan itehuicalhuan:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T15c">
+     —Nocnihuan,
+    </div>
+    <div class="txs" id="T15d">
+     tla anquipiyaj tlen anquintlanojnotzasquej nin tlacamej,
+    </div>
+    <div class="txs" id="T15e">
+     huelis anquijtosquej aman.
+    </div>
+    <span id="bookmarks15">
+    </span>
+   </div>
+   <span id="bookmarks15">
+   </span>
+   <a id="v16">
+   </a>
+   <div class="p">
+    <div class="txs" id="T16a">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon Pablo ohuajmoquetz,
+    </div>
+    <div class="txs" id="T16b">
+     ihuan oquintlajtlanilij ca ima para amo ma nahuatican.
+    </div>
+    <div class="txs" id="T16c">
+     Idiai oquijtoj:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T16d">
+     —Tlacamej hebreos,
+    </div>
+    <div class="txs" id="T16e">
+     ihuan anmejhuan xhebreos aquin anquitlacaitaj Dios,
+    </div>
+    <div class="txs" id="T16f">
+     xcaquican.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Non inDios non hebreos oquintlapejpenij tohuejcapalejhuan,
+    </div>
+    <div class="txs" id="T17b">
+     ihuan oquinmiyequilij non hebreos cuac chantiyaj quej de huejhuejcamej de ne Egipto.
+    </div>
+    <div class="txs" id="T17c">
+     Ihuan ca ipoder oquinquixtij de ompa ne tetlalpan.
+    </div>
+    <span id="bookmarks17">
+    </span>
+    <a id="v18">
+    </a>
+    <div class="txs" id="T18">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan ipan canaj cuarentaj años Dios oquinxicohuilij non quej yejhuan mohuicayaj cuac yejhuan nejnemiyaj ipan xalpatlajcan.
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan non chicome países ocatca ne ipan non tlali itoca Canaán,
+    </div>
+    <div class="txs" id="T19b">
+     Dios oquinxixitinij,
+    </div>
+    <div class="txs" id="T19c">
+     para non intlalhuan oquintlayocolij non tohuejcapalejhuan.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Más después canaj ipan nahui cientoj huan tlajco años,
+    </div>
+    <div class="txs" id="T20b">
+     oquinmandaroj non hebreos intech non jueces,
+    </div>
+    <div class="txs" id="T20c">
+     hasta ipan non tiempoj cuac onemico non profetaj Samuel.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Idiai non tlacamej oquitlajtlanquej se rey para yejhua quinmandaros,
+    </div>
+    <div class="txs" id="T21b">
+     ihuan Dios oquinmacac Saúl para yejhua rey yas inca yejhuan por cuarentaj años.
+    </div>
+    <div class="txs" id="T21c">
+     Saúl iconej catca Cis ihuan huejca teixhuij catca itech ihuejcatlacanelhuayo Benjamín.
+    </div>
+    <span id="bookmarks21">
+    </span>
+    <a id="v22">
+    </a>
+    <div class="txs" id="T22a">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Más después Dios oquijcuanij Saúl,
+    </div>
+    <div class="txs" id="T22b">
+     ihuan oquicalaquij David para rey.
+    </div>
+    <div class="txs" id="T22c">
+     Ihuan de yejhua oquijtoj:
+    </div>
+    <div class="txs" id="T22d">
+     “Nejhua onicnextij David,
+    </div>
+    <div class="txs" id="T22e">
+     iconej Isaí.
+    </div>
+    <div class="txs" id="T22f">
+     Yejhua se tlacatl nechpactiya ihuan quichihuas mochi tlen nicnequis.”
+    </div>
+    <span id="bookmarks22">
+    </span>
+    <a id="v23">
+    </a>
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús yejhua se de non ihuejcaixhuij David,
+    </div>
+    <div class="txs" id="T23b">
+     ihuan yejhua ocuajtitlan Dios para quinmaquixtis non hebreos,
+    </div>
+    <div class="txs" id="T23c">
+     quiyon quej yejhua yoquiprometerojca.
+    </div>
+    <span id="bookmarks23">
+    </span>
+    <a id="v24">
+    </a>
+    <div class="txs" id="T24a">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Cuac xe hualaya Jesús,
+    </div>
+    <div class="txs" id="T24b">
+     Juan oquimilij mochtin non chanejquej de Israel deque monequi moyolcuepasquej itechica Dios ihuan mocuatequisquej.
+    </div>
+    <span id="bookmarks24">
+    </span>
+    <a id="v25">
+    </a>
+    <div class="txs" id="T25a">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac Juan ye tlanticatca non itequij,
+    </div>
+    <div class="txs" id="T25b">
+     oquijtoj:
+    </div>
+    <div class="txs" id="T25c">
+     “¿Tlen anquinemiliyaj aquin nejhua?
+    </div>
+    <div class="txs" id="T25d">
+     Xnejhua non aquin anmejhuan anquinemiliyaj.
+    </div>
+    <div class="txs" id="T25e">
+     Pero después de nejhua hualas ocse de non aquin nejhua xnechmelahua para nictomilis ihuerachis ipan icxihuan.”
+    </div>
+    <span id="bookmarks25">
+    </span>
+   </div>
+   <span id="bookmarks25">
+   </span>
+   <a id="v26">
+   </a>
+   <div class="p">
+    <div class="txs" id="T26a">
+     <span class="v">
+      26
+     </span>
+     <span class="vsp">
+     </span>
+     ’Nocnihuan,
+    </div>
+    <div class="txs" id="T26b">
+     huejca teixhuihuan de itech Abraham,
+    </div>
+    <div class="txs" id="T26c">
+     ihuan anmochtin xhebreos de non anquitlacaitaj Dios,
+    </div>
+    <div class="txs" id="T26d">
+     nin nemachtili quitemaca maquixtilistli nin para anmejhuan.
+    </div>
+    <span id="bookmarks26">
+    </span>
+    <a id="v27">
+    </a>
+    <div class="txs" id="T27a">
+     <span class="v">
+      27
+     </span>
+     <span class="vsp">
+     </span>
+     Non chantij Jerusalén ihuan intlayecancahuan xquimatiyaj aquiniyon catca Jesús,
+    </div>
+    <div class="txs" id="T27b">
+     niyon xcajsicamatiyaj non tlen quimomachtijtayaj ipan inamatlajcuilol non profetas ipan non sinagogas cada sábado.
+    </div>
+    <div class="txs" id="T27c">
+     Pero sa no yejhuan oquicomplirojquej intlajtol non profetas cuac oquitlajtlacolmacaquej Jesús.
+    </div>
+    <span id="bookmarks27">
+    </span>
+    <a id="v28">
+    </a>
+    <div class="txs" id="T28a">
+     <span class="v">
+      28
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan masqui xoquinextilijquej itlaj tlen xcuali oquichij para quimictisquej,
+    </div>
+    <div class="txs" id="T28b">
+     yejhuan oquitlajtlanilijquej Pilato para ma tlanahuati ma quimictican.
+    </div>
+    <span id="bookmarks28">
+    </span>
+    <a id="v29">
+    </a>
+    <div class="txs" id="T29a">
+     <span class="v">
+      29
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac yoquichihuilijquej mochi non tlemach tlen non Yectlajcuiloli quijtohua de quej mochihuas itech,
+    </div>
+    <div class="txs" id="T29b">
+     oquitemoltijquej ipan non cruz ihuan oquitlaltocaquej.
+    </div>
+    <span id="bookmarks29">
+    </span>
+    <a id="v30">
+    </a>
+    <div class="txs" id="T30">
+     <span class="v">
+      30
+     </span>
+     <span class="vsp">
+     </span>
+     Pero Dios oquiyolitij.
+    </div>
+    <span id="bookmarks30">
+    </span>
+    <a id="v31">
+    </a>
+    <div class="txs" id="T31a">
+     <span class="v">
+      31
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan miyec tonal oquinmotitijtinen non ihuan oyajcaj de Galilea para Jerusalén.
+    </div>
+    <div class="txs" id="T31b">
+     Ihuan aman,
+    </div>
+    <div class="txs" id="T31c">
+     yejhuan quimpaninextiliyaj non tlacamej acerca de Jesús.
+    </div>
+    <span id="bookmarks31">
+    </span>
+   </div>
+   <span id="bookmarks31">
+   </span>
+   <a id="v32">
+   </a>
+   <div class="p">
+    <div class="txs" id="T32">
+     <span class="v">
+      32
+     </span>
+     <span class="vsp">
+     </span>
+     ’Ihuan aman tejhuan temechmachiltiyaj non cuali tlajtoli de non tlen Dios oquimprometerohuilij non tohuejcapalejhuan.
+    </div>
+    <span id="bookmarks32">
+    </span>
+    <a id="v33">
+    </a>
+    <div class="txs" id="T33a">
+     <span class="v">
+      33
+     </span>
+     <span class="vsp">
+     </span>
+     Quiyon aman tejhuan,
+    </div>
+    <div class="txs" id="T33b">
+     tide huejcaipilhuan.
+    </div>
+    <div class="txs" id="T33c">
+     Dios otechcomplirohuilij cuac oquiyolitij ihuan oquixtij Jesús ijtic itlaltecoch.
+    </div>
+    <div class="txs" id="T33d">
+     Quiyon omochij quej tlajcuilolnesticaj ipan non salmo ica ome:
+    </div>
+    <div class="txs" id="T33e">
+     “Tejhua tinoconej.
+    </div>
+    <div class="txs" id="T33f">
+     Nejhua yonimitztlacatili aman.”
+    </div>
+    <span id="bookmarks33">
+    </span>
+    <a id="v34">
+    </a>
+    <div class="txs" id="T34a">
+     <span class="v">
+      34
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan deque oquiquetztej intech non micquej non para xoqueman ijtlacahuis icuerpoj,
+    </div>
+    <div class="txs" id="T34b">
+     huelis anquitasquej ipan nin Yectlajcuiloli quiyon quijtohua:
+    </div>
+    <div class="txs" id="T34c">
+     “Nicompliros non yectli ihuan huel melahuac promesaj onicprometerohuilij David.”
+    </div>
+    <span id="bookmarks34">
+    </span>
+    <a id="v35">
+    </a>
+    <div class="txs" id="T35a">
+     <span class="v">
+      35
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan no quijtohua ipan ocse salmo:
+    </div>
+    <div class="txs" id="T35b">
+     “Xticahuilis para ma ijtlacahui icuerpoj moyecTequipanojqui.”
+    </div>
+    <span id="bookmarks35">
+    </span>
+    <a id="v36">
+    </a>
+    <div class="txs" id="T36a">
+     <span class="v">
+      36
+     </span>
+     <span class="vsp">
+     </span>
+     Huel ca tlen melahuac,
+    </div>
+    <div class="txs" id="T36b">
+     David ipan itiempoj oquintequipanoj non tlacamej san quej Dios oquinahuatij,
+    </div>
+    <div class="txs" id="T36c">
+     ihuan después,
+    </div>
+    <div class="txs" id="T36d">
+     cuac yejhua omic,
+    </div>
+    <div class="txs" id="T36e">
+     inhuan omonechicoto non ihuejcapalejhuan campa tlaltoctoquej ihuan icuerpoj otlalpalan.
+    </div>
+    <span id="bookmarks36">
+    </span>
+    <a id="v37">
+    </a>
+    <div class="txs" id="T37a">
+     <span class="v">
+      37
+     </span>
+     <span class="vsp">
+     </span>
+     Pero icuerpoj Jesús non Dios oquiyolitij ihuan oquixtij ipan itlaltecoch,
+    </div>
+    <div class="txs" id="T37b">
+     xotlalpalan.
+    </div>
+    <span id="bookmarks37">
+    </span>
+    <a id="v38">
+    </a>
+    <div class="txs" id="T38a">
+     <span class="v">
+      38
+     </span>
+     <span class="vsp">
+     </span>
+     Nocnihuan,
+    </div>
+    <div class="txs" id="T38b">
+     anquipiyaj tlenca anquimatisquej de non anmotlajtlacol Dios quitlapojpolhuis san itechica Jesús.
+    </div>
+    <span id="bookmarks38">
+    </span>
+    <a id="v39">
+    </a>
+    <div class="txs" id="T39a">
+     <span class="v">
+      39
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan de mochi non tlemach,
+    </div>
+    <div class="txs" id="T39b">
+     tlen iley Moisés xohuel quitlapojpolhuiya,
+    </div>
+    <div class="txs" id="T39c">
+     itechcopa Jesús mochi quitlapojpolhuiya para mochtin non quineltocaj.
+    </div>
+    <span id="bookmarks39">
+    </span>
+    <a id="v40">
+    </a>
+    <div class="txs" id="T40a">
+     <span class="v">
+      40
+     </span>
+     <span class="vsp">
+     </span>
+     Xmotacan sa no anmejhuan,
+    </div>
+    <div class="txs" id="T40b">
+     amo anmopan mochihuas non tlen oquijcuilojquej non profetas cuac oquijtojquej:
+    </div>
+    <span id="bookmarks40">
+    </span>
+   </div>
+   <span id="bookmarks40">
+   </span>
+   <a id="v41">
+   </a>
+   <div class="q-vv top-spacing">
+    <div class="txs" id="T41a">
+     <span class="v">
+      41
+     </span>
+     <span class="vsp">
+     </span>
+     Xquitacan,
+    </div>
+    <div class="txs" id="T41b">
+     tepijpinahuijquej,
+    </div>
+    <div class="txs" id="T41c">
+     xmojcatlachacan ihuan xpojpolihuican,
+    </div>
+    <div class="txs" id="T41d">
+     pampa nejhua,
+    </div>
+   </div>
+   <div class="q">
+    <div class="txs" id="T41e">
+     aquin niDios,
+    </div>
+    <div class="txs" id="T41f">
+     nicchihuas ipan nin tiempoj mientras annemij se tequitl chicahuac quej hasta xanquineltocasquej masqui acaj mechtlanojnotzas.
+    </div>
+    <span id="bookmarks41">
+    </span>
+   </div>
+   <span id="bookmarks41">
+   </span>
+   <a id="v42">
+   </a>
+   <div class="p">
+    <div class="txs" id="T42a">
+     <span class="v">
+      42
+     </span>
+     <span class="vsp">
+     </span>
+     Cuac Pablo ihuan itehuicalhuan oquisquej ne ipan insinagogaj non hebreos,
+    </div>
+    <div class="txs" id="T42b">
+     non xhebreos chicahuac oquintlajtlanilijquej ocsepa ma quintlanojnotzacan de juatlon tlajtoli ipan ocse sábado.
+    </div>
+    <span id="bookmarks42">
+    </span>
+    <a id="v43">
+    </a>
+    <div class="txs" id="T43a">
+     <span class="v">
+      43
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac yotlanquej momachtiyaj ne ipan non sinagogaj miyequej de non hebreos,
+    </div>
+    <div class="txs" id="T43b">
+     ihuan de non san omochijquej hebreos pampa oquiselijquej intlaneltoc non hebreos ihuan no cuali quitlacaitayaj Dios,
+    </div>
+    <div class="txs" id="T43c">
+     oquintocaquej Pablo ihuan Bernabé.
+    </div>
+    <div class="txs" id="T43d">
+     Ihuan yejhuan quintlanojnotzayaj non tlacamej para ma nemican melajqui ipan itetlajsojtlalis Dios.
+    </div>
+    <span id="bookmarks43">
+    </span>
+   </div>
+   <span id="bookmarks43">
+   </span>
+   <a id="v44">
+   </a>
+   <div class="p">
+    <div class="txs" id="T44">
+     <span class="v">
+      44
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan ipan non ocse sábado omosentlalijquej casi mochtin non chanejquej para quicaquisquej non itlajtoltzin Dios.
+    </div>
+    <span id="bookmarks44">
+    </span>
+    <a id="v45">
+    </a>
+    <div class="txs" id="T45a">
+     <span class="v">
+      45
+     </span>
+     <span class="vsp">
+     </span>
+     Pero cuac non hebreos oquitaquej non miyequej tlacamej,
+    </div>
+    <div class="txs" id="T45b">
+     yejhuan chicahuac oquenvidiarojquej ihuan ocualanquej,
+    </div>
+    <div class="txs" id="T45c">
+     ihuan niman opejquej quitentocaj Pablo ihuan cuijhuicaltijtayaj.
+    </div>
+    <span id="bookmarks45">
+    </span>
+    <a id="v46">
+    </a>
+    <div class="txs" id="T46a">
+     <span class="v">
+      46
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon Pablo ihuan Bernabé chicahuac oquinnanquilijquej,
+    </div>
+    <div class="txs" id="T46b">
+     ihuan oquimilijquej:
+    </div>
+   </div>
+   <div class="p">
+    <div class="txs" id="T46c">
+     —Quiyon monequiya para primero anmejhuan hebreos timechmacasquej itlajtoltzin Dios.
+    </div>
+    <div class="txs" id="T46d">
+     Pero aman pampa xanquinequij anquiselisquej,
+    </div>
+    <div class="txs" id="T46e">
+     ihuan pampa anquinemiliyaj xmechtocarohua non hueyi nemilistli para mochipa,
+    </div>
+    <div class="txs" id="T46f">
+     timotlajcoxelosquej ihuan yej tiyasquej intech non xhebreos.
+    </div>
+    <span id="bookmarks46">
+    </span>
+    <a id="v47">
+    </a>
+    <div class="txs" id="T47a">
+     <span class="v">
+      47
+     </span>
+     <span class="vsp">
+     </span>
+     Quiyon ticchihuasquej pampa quiyon otechnahuatij toSeñor,
+    </div>
+    <div class="txs" id="T47b">
+     quiyon quijtohua:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T47c">
+     Onimitztlalij para tlanextli intech non xhebreos,
+    </div>
+    <div class="txs" id="T47d">
+     ihuan para tejhua ticuicas non temaquixtilistli nojnohuiyan de nin tlalticpactli.
+    </div>
+    <span id="bookmarks47">
+    </span>
+   </div>
+   <span id="bookmarks47">
+   </span>
+   <a id="v48">
+   </a>
+   <div class="p">
+    <div class="txs" id="T48a">
+     <span class="v">
+      48
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan cuac yejhuan non xhebreos oquicacquej non tlajtoli,
+    </div>
+    <div class="txs" id="T48b">
+     paquiyaj ihuan opejquej quijtohuaj deque non itlajtoltzin toSeñor melahuac cuali.
+    </div>
+    <div class="txs" id="T48c">
+     Ihuan otlaneltocacquej mochtin non Dios oquintlapejpenij para quipiyasquej nemilistli para mochipa.
+    </div>
+    <span id="bookmarks48">
+    </span>
+   </div>
+   <span id="bookmarks48">
+   </span>
+   <a id="v49">
+   </a>
+   <div class="p">
+    <div class="txs" id="T49">
+     <span class="v">
+      49
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan itlajtoltzin toSeñor momoyahuaya nohuiyan mochi non región.
+    </div>
+    <span id="bookmarks49">
+    </span>
+    <a id="v50">
+    </a>
+    <div class="txs" id="T50a">
+     <span class="v">
+      50
+     </span>
+     <span class="vsp">
+     </span>
+     Pero non hebreos oquinyolchicajquej non sihuamej cuajcualtin ihuan quitlacaitayaj Dios ihuan no oquinnotzquej non tlacamej mas hueyixtoquej ipan non ciudad.
+    </div>
+    <div class="txs" id="T50b">
+     Cuacon opej quintlahuelitaj ihuan quintlayohuiltiyaj Pablo ihuan Bernabé hasta huel oquinquixtijquej ipan non región.
+    </div>
+    <span id="bookmarks50">
+    </span>
+    <a id="v51">
+    </a>
+    <div class="txs" id="T51a">
+     <span class="v">
+      51
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon non apóstoles oquitzetzelojquej imicxihuan para oquitepejquej non tlaltejtli.
+    </div>
+    <div class="txs" id="T51b">
+     Quiyon oquichijquej para oquimititijquej deque Dios xquinselis,
+    </div>
+    <div class="txs" id="T51c">
+     yej quintlajtlacolmacas.
+    </div>
+    <div class="txs" id="T51d">
+     Cuacon oyajquej ne ipan non ciudad itoca Iconio.
+    </div>
+    <span id="bookmarks51">
+    </span>
+    <a id="v52">
+    </a>
+    <div class="txs" id="T52">
+     <span class="v">
+      52
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan non tlaneltocaj chicahuac paquiyaj ihuan non Espíritu Santo quintemitaya ipan inyolo.
+    </div>
+    <span id="bookmarks52">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2005, 2012,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2012, Wycliffe Bible Translators, Inc.
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nuz&amp;ISO_ROD_index=126">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de Tlamacazapa.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://www.ScriptureEarth.org/data/nuz/audio/nuz-45-ACT-13.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>

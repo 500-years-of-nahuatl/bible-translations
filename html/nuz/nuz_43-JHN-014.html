@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#000B63" name="theme-color"/>
+  <title>
+   San Juan 14
+  </title>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+  </script>
+  <script src="js/popcorn-complete.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.tooltipster.min.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-audio.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-footnotes.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-menus.js" type="text/javascript">
+  </script>
+  <script src="js/app-builder-video.js" type="text/javascript">
+  </script>
+  <script src="js/book-names.js" type="text/javascript">
+  </script>
+  <link href="css/tooltipster.css" rel="stylesheet" type="text/css"/>
+  <link href="./manifest.webmanifest" rel="manifest"/>
+  <link href="./icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="css/sab-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   // Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.48, end: 6.77 },
+    { label: "1b", start: 7.02, end: 12.39 },
+    { label: "2a", start: 12.64, end: 17.33 },
+    { label: "2b", start: 17.58, end: 19.47 },
+    { label: "2c", start: 19.72, end: 21.19 },
+    { label: "2d", start: 21.44, end: 22.59 },
+    { label: "2e", start: 22.84, end: 26.13 },
+    { label: "3a", start: 26.38, end: 28.09 },
+    { label: "3b", start: 28.34, end: 33.25 },
+    { label: "4a", start: 33.5, end: 36.13 },
+    { label: "4b", start: 36.38, end: 38.59 },
+    { label: "5a", start: 38.84, end: 40.59 },
+    { label: "5b", start: 40.84, end: 41.53 },
+    { label: "5c", start: 41.78, end: 43.69 },
+    { label: "5d", start: 43.94, end: 46.15 },
+    { label: "6a", start: 46.4, end: 48.09 },
+    { label: "6b", start: 48.34, end: 50.31 },
+    { label: "6c", start: 50.56, end: 51.91 },
+    { label: "6d", start: 52.16, end: 54.09 },
+    { label: "6e", start: 54.34, end: 57.99 },
+    { label: "7a", start: 58.24, end: 60.51 },
+    { label: "7b", start: 60.76, end: 62.87 },
+    { label: "7c", start: 63.12, end: 66.95 },
+    { label: "8a", start: 67.2, end: 69.11 },
+    { label: "8b", start: 69.36, end: 70.17 },
+    { label: "8c", start: 70.42, end: 72.81 },
+    { label: "8d", start: 73.06, end: 75.17 },
+    { label: "9a", start: 75.42, end: 76.97 },
+    { label: "9b", start: 77.22, end: 77.95 },
+    { label: "9c", start: 78.2, end: 79.95 },
+    { label: "9d", start: 80.2, end: 81.53 },
+    { label: "9e", start: 81.78, end: 83.01 },
+    { label: "9f", start: 83.26, end: 84.95 },
+    { label: "9g", start: 85.2, end: 85.87 },
+    { label: "9h", start: 86.12, end: 88.59 },
+    { label: "10a", start: 88.84, end: 95.23 },
+    { label: "10b", start: 95.48, end: 96.71 },
+    { label: "10c", start: 96.96, end: 98.29 },
+    { label: "10d", start: 98.54, end: 100.63 },
+    { label: "10e", start: 100.88, end: 102.43 },
+    { label: "11a", start: 102.68, end: 105.21 },
+    { label: "11b", start: 105.46, end: 109.41 },
+    { label: "11c", start: 109.66, end: 111.57 },
+    { label: "11d", start: 111.82, end: 114.37 },
+    { label: "11e", start: 114.62, end: 117.13 },
+    { label: "12a", start: 117.38, end: 119.21 },
+    { label: "12b", start: 119.46, end: 122.95 },
+    { label: "12c", start: 123.2, end: 126.41 },
+    { label: "12d", start: 126.66, end: 129.25 },
+    { label: "13a", start: 129.5, end: 132.59 },
+    { label: "13b", start: 132.84, end: 138.25 },
+    { label: "14", start: 138.5, end: 142.91 },
+    { label: "15a", start: 143.16, end: 144.97 },
+    { label: "15b", start: 145.22, end: 147.41 },
+    { label: "16a", start: 147.66, end: 152.43 },
+    { label: "16b", start: 152.68, end: 155.67 },
+    { label: "17a", start: 155.92, end: 158.05 },
+    { label: "17b", start: 158.3, end: 162.13 },
+    { label: "17c", start: 162.38, end: 165.03 },
+    { label: "17d", start: 165.28, end: 167.63 },
+    { label: "17e", start: 167.88, end: 169.49 },
+    { label: "17f", start: 169.74, end: 172.97 },
+    { label: "18a", start: 173.22, end: 176.15 },
+    { label: "18b", start: 176.4, end: 179.05 },
+    { label: "19a", start: 179.3, end: 184.39 },
+    { label: "19b", start: 184.64, end: 186.55 },
+    { label: "19c", start: 186.8, end: 190.19 },
+    { label: "20a", start: 190.44, end: 194.95 },
+    { label: "20b", start: 195.2, end: 197.09 },
+    { label: "20c", start: 197.34, end: 199.29 },
+    { label: "21a", start: 199.54, end: 202.75 },
+    { label: "21b", start: 203, end: 204.99 },
+    { label: "21c", start: 205.24, end: 209.49 },
+    { label: "21d", start: 209.74, end: 214.39 },
+    { label: "22a", start: 214.64, end: 215.31 },
+    { label: "22b", start: 215.56, end: 216.67 },
+    { label: "22c", start: 216.92, end: 217.57 },
+    { label: "22d", start: 217.82, end: 219.07 },
+    { label: "22e", start: 219.32, end: 221.71 },
+    { label: "22f", start: 221.96, end: 224.31 },
+    { label: "23a", start: 224.56, end: 226.35 },
+    { label: "23b", start: 226.6, end: 228.15 },
+    { label: "23c", start: 228.4, end: 230.51 },
+    { label: "23d", start: 230.76, end: 232.65 },
+    { label: "23e", start: 232.9, end: 236.61 },
+    { label: "24a", start: 236.86, end: 238.37 },
+    { label: "24b", start: 238.62, end: 240.67 },
+    { label: "24c", start: 240.92, end: 244.53 },
+    { label: "24d", start: 244.78, end: 247.15 },
+    { label: "25", start: 247.4, end: 250.93 },
+    { label: "26a", start: 251.18, end: 258.31 },
+    { label: "26b", start: 258.56, end: 262.97 },
+    { label: "27a", start: 263.22, end: 265.67 },
+    { label: "27b", start: 265.92, end: 268.27 },
+    { label: "27c", start: 268.52, end: 273.45 },
+    { label: "27d", start: 273.7, end: 277.99 },
+    { label: "28a", start: 278.24, end: 280.79 },
+    { label: "28b", start: 281.04, end: 284.63 },
+    { label: "28c", start: 284.88, end: 286.91 },
+    { label: "28d", start: 287.16, end: 289.37 },
+    { label: "28e", start: 289.62, end: 291.75 },
+    { label: "29a", start: 292, end: 294.27 },
+    { label: "29b", start: 294.52, end: 295.67 },
+    { label: "29c", start: 295.92, end: 297.59 },
+    { label: "30a", start: 297.84, end: 299.97 },
+    { label: "30b", start: 300.22, end: 303.61 },
+    { label: "30c", start: 303.86, end: 306.75 },
+    { label: "31a", start: 307, end: 315.73 },
+    { label: "31b", start: 315.98, end: 317.11 },
+    { label: "31c", start: 317.36, end: 319.19 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 21 }];
+var hasIntro = false;
+var baseRef  = "nuz-43-JHN-";
+  </script>
+ </head>
+ <body class="browser" dir="LTR">
+  <div id="book-menu">
+  </div>
+  <div id="chapter-menu">
+  </div>
+  <div id="toolbar-top">
+   <div class="navigation-top">
+    <span class="button">
+     <a href="" title="Previous Book">
+      &lt;&lt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-43-JHN-013.html" title="Previous Chapter">
+      &lt;
+     </a>
+    </span>
+    <span id="book-selector">
+     <a href="#" onclick="toggleBookMenu(); return false;">
+      San Juan
+     </a>
+    </span>
+    <span id="chapter-selector">
+     <a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">
+      14
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-43-JHN-015.html" title="Next Chapter">
+      &gt;
+     </a>
+    </span>
+    <span class="button">
+     <a href="nuz-44-ACT-001.html" title="Next Book">
+      &gt;&gt;
+     </a>
+    </span>
+   </div>
+  </div>
+  <div id="content">
+   <div class="s">
+    <div id="s1">
+     Jesús yejhua ojtli para se huelis ajsis itech non toTajtzin
+    </div>
+   </div>
+   <a id="v1">
+   </a>
+   <div class="m">
+    <div class="c-drop">
+     14
+    </div>
+    <div class="txs" id="T1a">
+     ’Anmejhuan amo lacuaj xmotequipachocan.
+    </div>
+    <div class="txs" id="T1b">
+     Xtlalican anmoyolo itech Dios ihuan no xtlalican anmoyolo notech nejhua.
+    </div>
+    <span id="bookmarks1">
+    </span>
+   </div>
+   <div class="video-block">
+    <div class="video-container video-gospel video-16-9" id="VIDEO0" style="background-image:url('images/VGF_NUZTBLP2DV_030.videoStill.jpg');">
+     <a href="#" onclick="playOnlineVideo('VIDEO0', 'https://4.dbt.io/api/bible/filesets/NUZTBLP2DV/JHN-14-1-14/playlist.m3u8?v=4&amp;key=9525bb6e-bf28-4465-baee-ac04a77a71d2'); return false;">
+      <img src="images/video_play_01.png"/>
+     </a>
+    </div>
+    <div class="video-title">
+     <span class="video-title">
+      San Juan 14.1-14
+     </span>
+    </div>
+   </div>
+   <div class="p">
+    <a id="v2">
+    </a>
+    <div class="txs" id="T2a">
+     <span class="v">
+      2
+     </span>
+     <span class="vsp">
+     </span>
+     Ne ichan noTajtzin oncaj miyec chanyotl campa huelis chantisquej.
+    </div>
+    <div class="txs" id="T2b">
+     Tla xonyasquiya miyec chanyoltl,
+    </div>
+    <div class="txs" id="T2c">
+     xno nemechijlisquiya.
+    </div>
+    <div class="txs" id="T2d">
+     Aman quiyon,
+    </div>
+    <div class="txs" id="T2e">
+     niyoj para niconyectlalis campa anmonchantisquej.
+    </div>
+    <span id="bookmarks2">
+    </span>
+    <a id="v3">
+    </a>
+    <div class="txs" id="T3a">
+     <span class="v">
+      3
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan tla yonitlayecchihuato,
+    </div>
+    <div class="txs" id="T3b">
+     ocsepa nihualas para nemechhuicas anmejhuan no anyasquej campa nejhua niyás.
+    </div>
+    <span id="bookmarks3">
+    </span>
+    <a id="v4">
+    </a>
+    <div class="txs" id="T4a">
+     <span class="v">
+      4
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan anmejhuan ye nenquimatztoquej caniyon niyoj,
+    </div>
+    <div class="txs" id="T4b">
+     ihuan ye nenquixmatztoquej non ojtli.
+    </div>
+    <span id="bookmarks4">
+    </span>
+   </div>
+   <span id="bookmarks4">
+   </span>
+   <a id="v5">
+   </a>
+   <div class="p">
+    <div class="txs" id="T5a">
+     <span class="v">
+      5
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon Tomás oquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T5b">
+     —NoSeñor,
+    </div>
+    <div class="txs" id="T5c">
+     tejhuan xticmatij caniyon tiyoj.
+    </div>
+    <div class="txs" id="T5d">
+     ¿Queniyon tiquixmatisquej non ojtli?
+    </div>
+    <span id="bookmarks5">
+    </span>
+   </div>
+   <span id="bookmarks5">
+   </span>
+   <a id="v6">
+   </a>
+   <div class="p">
+    <div class="txs" id="T6a">
+     <span class="v">
+      6
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús oquinanquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T6b">
+     —Huel ca tlen melahuac nejhua niojtli,
+    </div>
+    <div class="txs" id="T6c">
+     ihuan nejhua nitlen melahuac,
+    </div>
+    <div class="txs" id="T6d">
+     ihuan no nejhua ninemilistli.
+    </div>
+    <div class="txs" id="T6e">
+     Tla xpor nejhua xacaj huelis ajsis itech noPalej.
+    </div>
+    <span id="bookmarks6">
+    </span>
+    <a id="v7">
+    </a>
+    <div class="txs" id="T7a">
+     <span class="v">
+      7
+     </span>
+     <span class="vsp">
+     </span>
+     Tla anmejhuan annechixmatisquiyaj nejhua,
+    </div>
+    <div class="txs" id="T7b">
+     no anquixmatisquiyaj noTajtzin.
+    </div>
+    <div class="txs" id="T7c">
+     Ihuan desde aman anquixmatij ihuan ye anquitztoquej.
+    </div>
+    <span id="bookmarks7">
+    </span>
+   </div>
+   <span id="bookmarks7">
+   </span>
+   <a id="v8">
+   </a>
+   <div class="p">
+    <div class="txs" id="T8a">
+     <span class="v">
+      8
+     </span>
+     <span class="vsp">
+     </span>
+     Coacon Felipe oquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T8b">
+     —NoSeñor,
+    </div>
+    <div class="txs" id="T8c">
+     xtechcahuili ma tiquitacan toTajtzin,
+    </div>
+    <div class="txs" id="T8d">
+     ihuan ca juatlon tiyolpachihuisquej.
+    </div>
+    <span id="bookmarks8">
+    </span>
+   </div>
+   <span id="bookmarks8">
+   </span>
+   <a id="v9">
+   </a>
+   <div class="p">
+    <div class="txs" id="T9a">
+     <span class="v">
+      9
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús oquinanquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T9b">
+     —Felipe,
+    </div>
+    <div class="txs" id="T9c">
+     masqui hueyi tiempoj anmohuan nicáj,
+    </div>
+    <div class="txs" id="T9d">
+     ¿xe tinechixmati?
+    </div>
+    <div class="txs" id="T9e">
+     Non aquin nechita,
+    </div>
+    <div class="txs" id="T9f">
+     no ijqui quita noPalej.
+    </div>
+    <div class="txs" id="T9g">
+     Cuacon,
+    </div>
+    <div class="txs" id="T9h">
+     ¿tlequene tinechtlajtlanilia ma anmechititi non toPalej?
+    </div>
+    <span id="bookmarks9">
+    </span>
+    <a id="v10">
+    </a>
+    <div class="txs" id="T10a">
+     <span class="v">
+      10
+     </span>
+     <span class="vsp">
+     </span>
+     ¿Xticneltoca deque nejhua nicáj ihuan noPalej ihuan noPalej nohuan caj?
+    </div>
+    <div class="txs" id="T10b">
+     Non tlen nemechiliya,
+    </div>
+    <div class="txs" id="T10c">
+     xniquijtohua san de nejhua.
+    </div>
+    <div class="txs" id="T10d">
+     Non noPalej nohuan nemi,
+    </div>
+    <div class="txs" id="T10e">
+     yejhua tequipanohua para yejhua.
+    </div>
+    <span id="bookmarks10">
+    </span>
+   </div>
+   <span id="bookmarks10">
+   </span>
+   <a id="v11">
+   </a>
+   <div class="p">
+    <div class="txs" id="T11a">
+     <span class="v">
+      11
+     </span>
+     <span class="vsp">
+     </span>
+     Cuacon Jesús oquimilij itehuicalhuan:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T11b">
+     —Xneltocacan non tlen nimechilia deque nejhua nicaj ihuan noTajtzin,
+    </div>
+    <div class="txs" id="T11c">
+     ihuan no Tajtzin nohuan caj.
+    </div>
+    <div class="txs" id="T11d">
+     Ihuan tla amo anquineltocaj non tlen nemechiliya,
+    </div>
+    <div class="txs" id="T11e">
+     xneltocacan itech non tequitl tlen nicchihua.
+    </div>
+    <span id="bookmarks11">
+    </span>
+    <a id="v12">
+    </a>
+    <div class="txs" id="T12a">
+     <span class="v">
+      12
+     </span>
+     <span class="vsp">
+     </span>
+     Huel ca tlen melahuac nemechiliya,
+    </div>
+    <div class="txs" id="T12b">
+     non aquin nechneltocas no quichihuas non tlen nejhua nicchihua.
+    </div>
+    <div class="txs" id="T12c">
+     Ihuan yejhua quichihuas no ijqui non tequitl más huejhueyi,
+    </div>
+    <div class="txs" id="T12d">
+     pampa nejhua nias campa caj noPalej.
+    </div>
+    <span id="bookmarks12">
+    </span>
+    <a id="v13">
+    </a>
+    <div class="txs" id="T13a">
+     <span class="v">
+      13
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan mochi tlen anmejhuan antlajtlanisquej ca notoca,
+    </div>
+    <div class="txs" id="T13b">
+     nejhua nicchihuas para quion nicteititis ihueyilis noTajtzin nejhua aquin niiConej.
+    </div>
+    <span id="bookmarks13">
+    </span>
+    <a id="v14">
+    </a>
+    <div class="txs" id="T14">
+     <span class="v">
+      14
+     </span>
+     <span class="vsp">
+     </span>
+     Nejhua nicchihuas san tleniyon antlajtlanisquej pampa amohuica nohuan.
+    </div>
+    <span id="bookmarks14">
+    </span>
+   </div>
+   <div class="s">
+    <div id="s2">
+     Jesús oquitoj ca ica cuajtitlanis non Espíritu Santo
+    </div>
+   </div>
+   <span id="bookmarks14">
+   </span>
+   <a id="v15">
+   </a>
+   <div class="p">
+    <div class="txs" id="T15a">
+     <span class="v">
+      15
+     </span>
+     <span class="vsp">
+     </span>
+     ’Tla anmejhuan annechtlajsojtla,
+    </div>
+    <div class="txs" id="T15b">
+     xtlacamatican nomandamientos.
+    </div>
+    <span id="bookmarks15">
+    </span>
+   </div>
+   <div class="video-block">
+    <div class="video-container video-gospel video-16-9" id="VIDEO1" style="background-image:url('images/VGF_NUZTBLP2DV_031.videoStill.jpg');">
+     <a href="#" onclick="playOnlineVideo('VIDEO1', 'https://4.dbt.io/api/bible/filesets/NUZTBLP2DV/JHN-14-15-31/playlist.m3u8?v=4&amp;key=9525bb6e-bf28-4465-baee-ac04a77a71d2'); return false;">
+      <img src="images/video_play_01.png"/>
+     </a>
+    </div>
+    <div class="video-title">
+     <span class="video-title">
+      San Juan 14.15-31
+     </span>
+    </div>
+   </div>
+   <div class="p">
+    <a id="v16">
+    </a>
+    <div class="txs" id="T16a">
+     <span class="v">
+      16
+     </span>
+     <span class="vsp">
+     </span>
+     Ihuan nejhua nictlatlajtis noTajtzin ma mechajtitlanili non aquin mechyolchicahuas,
+    </div>
+    <div class="txs" id="T16b">
+     mechpalehuis ihuan anmohuan nemis para mochipa.
+    </div>
+    <span id="bookmarks16">
+    </span>
+    <a id="v17">
+    </a>
+    <div class="txs" id="T17a">
+     <span class="v">
+      17
+     </span>
+     <span class="vsp">
+     </span>
+     Non Espíritu Santo de tlen melahuac,
+    </div>
+    <div class="txs" id="T17b">
+     non yejhua mechtlamachilistis ca non tlen melahuac ca Dios.
+    </div>
+    <div class="txs" id="T17c">
+     Non tlalticpactlacamej xhuelij quiseliaj,
+    </div>
+    <div class="txs" id="T17d">
+     pampa xhuelij quitaj niyon quixmatij.
+    </div>
+    <div class="txs" id="T17e">
+     Pero anmejhuan anquixmatij,
+    </div>
+    <div class="txs" id="T17f">
+     pampa yejhua anmohuan nemi ihuan anmohuan yas.
+    </div>
+    <span id="bookmarks17">
+    </span>
+    <a id="v18">
+    </a>
+    <div class="txs" id="T18a">
+     <span class="v">
+      18
+     </span>
+     <span class="vsp">
+     </span>
+     Cuac nias nejhua xanmechcahuas anicnomej,
+    </div>
+    <div class="txs" id="T18b">
+     yej nimocuepas para anmohuan nichantis.
+    </div>
+    <span id="bookmarks18">
+    </span>
+    <a id="v19">
+    </a>
+    <div class="txs" id="T19a">
+     <span class="v">
+      19
+     </span>
+     <span class="vsp">
+     </span>
+     Sa tetepichin tiempoj ihuan non tlalticpactlacamej xoc nechitasquej,
+    </div>
+    <div class="txs" id="T19b">
+     pero anmejhuan annechitasquej.
+    </div>
+    <div class="txs" id="T19c">
+     Ihuan anmejhuan annemisquej pampa nejhua ninemi.
+    </div>
+    <span id="bookmarks19">
+    </span>
+    <a id="v20">
+    </a>
+    <div class="txs" id="T20a">
+     <span class="v">
+      20
+     </span>
+     <span class="vsp">
+     </span>
+     Ipan non tonal anmejhuan anquimatisquej deque nejhua nicáj ihuan noTajtzin,
+    </div>
+    <div class="txs" id="T20b">
+     ihuan anmejhuan nohuan anyasquej,
+    </div>
+    <div class="txs" id="T20c">
+     ihuan nejhua nias anmohuan.
+    </div>
+    <span id="bookmarks20">
+    </span>
+    <a id="v21">
+    </a>
+    <div class="txs" id="T21a">
+     <span class="v">
+      21
+     </span>
+     <span class="vsp">
+     </span>
+     Non quimati ihuan quitlacamati nomandamiestos,
+    </div>
+    <div class="txs" id="T21b">
+     ca tlen melahuac nechtlajsojtla.
+    </div>
+    <div class="txs" id="T21c">
+     Ihuan non aquin nechtlajsojtla noTajtzin no quitlajsojtlas.
+    </div>
+    <div class="txs" id="T21d">
+     Ihuan nejhua no quiyon nictlajsojtlas ihuan itech nimoteititis.
+    </div>
+    <span id="bookmarks21">
+    </span>
+   </div>
+   <span id="bookmarks21">
+   </span>
+   <a id="v22">
+   </a>
+   <div class="p">
+    <div class="txs" id="T22a">
+     <span class="v">
+      22
+     </span>
+     <span class="vsp">
+     </span>
+     Judas,
+    </div>
+    <div class="txs" id="T22b">
+     non xejhua Iscariote,
+    </div>
+    <div class="txs" id="T22c">
+     oquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T22d">
+     —NoSeñor,
+    </div>
+    <div class="txs" id="T22e">
+     ¿tlequene timoteititis san totech tejhuan,
+    </div>
+    <div class="txs" id="T22f">
+     ihuan xintech non tlalticpactlacamej?
+    </div>
+    <span id="bookmarks22">
+    </span>
+   </div>
+   <span id="bookmarks22">
+   </span>
+   <a id="v23">
+   </a>
+   <div class="p">
+    <div class="txs" id="T23a">
+     <span class="v">
+      23
+     </span>
+     <span class="vsp">
+     </span>
+     Jesús oquinanquilij:
+    </div>
+   </div>
+   <div class="q top-spacing">
+    <div class="txs" id="T23b">
+     —Non aquin nechtlajsojtla,
+    </div>
+    <div class="txs" id="T23c">
+     quitencaqui de non tlen niquijtohua.
+    </div>
+    <div class="txs" id="T23d">
+     Ihuan noTajtzin quitlajsojtlas,
+    </div>
+    <div class="txs" id="T23e">
+     ihuan noTajtzin ihuan nejhua tihualasquej ihuan tichantisquej.
+    </div>
+    <span id="bookmarks23">
+    </span>
+    <a id="v24">
+    </a>
+    <div class="txs" id="T24a">
+     <span class="v">
+      24
+     </span>
+     <span class="vsp">
+     </span>
+     Non xnechtlajsojtla,
+    </div>
+    <div class="txs" id="T24b">
+     amo quicaqui non tlen niquijtohua.
+    </div>
+    <div class="txs" id="T24c">
+     Nin nemachtili niquijtojticaj ihuan anquicactoquej xde nehua,
+    </div>
+    <div class="txs" id="T24d">
+     yej de noTajtzin non onechhuajtitlan.
+    </div>
+    <span id="bookmarks24">
+    </span>
+   </div>
+   <span id="bookmarks24">
+   </span>
+   <a id="v25">
+   </a>
+   <div class="p">
+    <div class="txs" id="T25">
+     <span class="v">
+      25
+     </span>
+     <span class="vsp">
+     </span>
+     ’Mochi nin anmechijlijticaj ya que anmohuan nicáj.
+    </div>
+    <span id="bookmarks25">
+    </span>
+    <a id="v26">
+    </a>
+    <div class="txs" id="T26a">
+     <span class="v">
+      26
+     </span>
+     <span class="vsp">
+     </span>
+     Pero non Espíritu Santo cuajtitlanis noTajtzin pampa nohuan amohuica yejhua mechyolchicahuas ihuan mechpalehuis,
+    </div>
+    <div class="txs" id="T26b">
+     yejhua mochi mechmachtis ihuan mechilnamictis mochi tlen yonmechilij.
+    </div>
+    <span id="bookmarks26">
+    </span>
+   </div>
+   <span id="bookmarks26">
+   </span>
+   <a id="v27">
+   </a>
+   <div class="p">
+    <div class="txs" id="T27a">
+     <span class="v">
+      27
+     </span>
+     <span class="vsp">
+     </span>
+     ’Anmejhuan nimechnahuatiya ca cuali.
+    </div>
+    <div class="txs" id="T27b">
+     Nejhua nimechmaca noyolsehuilistli,
+    </div>
+    <div class="txs" id="T27c">
+     pero nejhua xnimechmaca non yolsehuilistli quej quitemacaj non tlalticpactlacamej.
+    </div>
+    <div class="txs" id="T27d">
+     Amo lacuaj ximotequipachtlalican ihuan amo xmomojtican.
+    </div>
+    <span id="bookmarks27">
+    </span>
+    <a id="v28">
+    </a>
+    <div class="txs" id="T28a">
+     <span class="v">
+      28
+     </span>
+     <span class="vsp">
+     </span>
+     Aman yonquicacquej deque nejhua yi nias,
+    </div>
+    <div class="txs" id="T28b">
+     ihuan deque nimocuepas para ocsepa anmohuan niyás.
+    </div>
+    <div class="txs" id="T28c">
+     Tla melahuac annechtlajsojtlasquiaj,
+    </div>
+    <div class="txs" id="T28d">
+     ampaquisquiaj deque yiniyoj itech noTajtzin,
+    </div>
+    <div class="txs" id="T28e">
+     pampa yejhua mas hueyixticaj que nejhua.
+    </div>
+    <span id="bookmarks28">
+    </span>
+    <a id="v29">
+    </a>
+    <div class="txs" id="T29a">
+     <span class="v">
+      29
+     </span>
+     <span class="vsp">
+     </span>
+     Jhuatlin nimechilia ya que xe niyoj,
+    </div>
+    <div class="txs" id="T29b">
+     para cuac mochihuas,
+    </div>
+    <div class="txs" id="T29c">
+     anmejhuan anquineltocasquej.
+    </div>
+    <span id="bookmarks29">
+    </span>
+   </div>
+   <span id="bookmarks29">
+   </span>
+   <a id="v30">
+   </a>
+   <div class="p">
+    <div class="txs" id="T30a">
+     <span class="v">
+      30
+     </span>
+     <span class="vsp">
+     </span>
+     ’Xoc lacuaj amohuan nitlajtos,
+    </div>
+    <div class="txs" id="T30b">
+     pampa yi hualas non tlamandarohua ipan nin tlalticpactli.
+    </div>
+    <div class="txs" id="T30c">
+     Masqui yejhua xquipiya poder para nechtlanis,
+    </div>
+    <span id="bookmarks30">
+    </span>
+    <a id="v31">
+    </a>
+    <div class="txs" id="T31a">
+     <span class="v">
+      31
+     </span>
+     <span class="vsp">
+     </span>
+     monequi quiyon mochihuas para non tlacamej mochitin quimatisquej deque nehua nictlajsojtla noTajtzin ihuan deque nejhua nicchihua non tlen yejhua quinequi.
+    </div>
+    <div class="txs" id="T31b">
+     Xmoquetzacan,
+    </div>
+    <div class="txs" id="T31c">
+     chohuej de nican.
+    </div>
+    <span id="bookmarks31">
+    </span>
+   </div>
+   <div class="footer">
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Texto:
+      </b>
+      © 2005, 2012,
+      <a class="web-link" href="http://www.wycliffe.org">
+       Wycliffe Bible Translators, Inc.
+      </a>
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      <b>
+       Audio:
+      </b>
+      ℗ 2012, Wycliffe Bible Translators, Inc.
+     </span>
+    </div>
+    <div class="footer-line">
+     <span class="footer">
+      — Visite
+      <a class="web-link" href="https://scriptureearth.org/00e-Escrituras_Indice.php?sortby=lang&amp;name=nuz&amp;ISO_ROD_index=126">
+       www.ScriptureEarth.org
+      </a>
+      para más materiales en náhuatl de Tlamacazapa.
+     </span>
+    </div>
+   </div>
+  </div>
+  <div id="toolbar-bottom">
+   <div class="audio-player">
+    <audio controls="" id="audio">
+     <source id="audio1" src="https://www.ScriptureEarth.org/data/nuz/audio/nuz-44-JHN-14.mp3"/>
+    </audio>
+   </div>
+  </div>
+  <script src="./pwa-main.js" type="text/javascript">
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+  </script>
+ </body>
+</html>
